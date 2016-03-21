@@ -81,7 +81,10 @@ angular.module('caseDetail', [])
                     start_drag_banner();
                     hover_detail();
                 },300);
+            }else{
+                $(".detail-description-touch").remove();
             }
+
             /* Drag banner img */
             function start_drag_banner(){
                 var img = $('.Drag-banner-img');
@@ -100,6 +103,10 @@ angular.module('caseDetail', [])
             }
 
             $(window).resize(function(){
+                /* Determine whether it is pc  */
+                if( index.window_width < 500 ){
+                    $(".detail-description-touch").remove();
+                }
                 start_drag_banner();
             });
 
@@ -183,4 +190,4 @@ angular.module('caseDetail', [])
         }
 
 
-    }]);
+    }])

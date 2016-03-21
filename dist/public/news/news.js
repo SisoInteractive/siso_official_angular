@@ -20,24 +20,25 @@ angular.module('news', [])
 
 }])
 
-.controller('NewsController',['$scope','$http' , function( $scope , $http ) {
+.controller('NewsController',['$scope', '$http', 'Entry', function( $scope , $http, Entry ) {
 
         var NewsCtrl = this;
         NewsCtrl.newList = [];
-        $scope.$on('$viewContentLoaded', function(){
-            $http.get('data/news.json').then(function(result){
-                var newList = result.data;
-                console.log(newList)
-                if(newList){
-                    NewsCtrl.newList = newList;
-                }
-                $scope.$on('onRepeatLast', function(scope, element, attrs){
-                    init();
-                });
-            },function(){
+        $scope.$on('$viewContentLoaded',function(){
+            Entry.get('news').then(
+                function (res) {
+                    NewsCtrl.newList = res.data.result;
+                }, function (res) {
+                    console.error(res);
+            });
+            $scope.$on('onRepeatLast', function(scope, element, attrs){
                 init();
             });
-        })
+        });
+
+        NewsCtrl.formatBody = function (body) {
+            return '<p>' + body.split('\n').join('</p><p>') + '</p>';
+        };
 
         function init(){
             console.log('join  news');

@@ -4,9 +4,12 @@
 "use strict";
 
 angular.module('home', [
-    'home.model'
+    'home.model',
+    'entry.service'
 ])
-    .config(['$stateProvider',function( $stateProvider ) {
+    .config(['$stateProvider', '$httpProvider', function( $stateProvider, $httpProvider ) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
         $stateProvider
             .state('siso.home', {
@@ -22,19 +25,29 @@ angular.module('home', [
     }])
 
 
-    .controller('HomeController', ['$scope','$http','$state','Home',function ($scope, $http, $state ,Home) {
+    .controller('HomeController', ['$scope','$http','$state','Home','Entry',function ($scope, $http, $state, Home, Entry) {
         //  show page
         var HomeCtrl = this;
         HomeCtrl.caseList = [];
         $scope.$on('$viewContentLoaded',function(){
-            Home.getHomeList().then(function (result) {
-                HomeCtrl.caseList = result;
-            });
+            HomeCtrl.isMobile = index.window_width < 500;
+
+            Entry.get('case').then(
+                function (res) {
+                    HomeCtrl.caseList = res.data.result;
+                }, function (res) {
+                    console.error(res);
+                    init();
+                });
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
                 //
                 init();
             });
+
+            HomeCtrl.formatBody = function (body) {
+                return '<p>' + body.split('\n').join('</p><p>') + '</p>';
+            };
         });
         function init(){
             console.log('进入 main!');
@@ -95,34 +108,21 @@ angular.module('home', [
             function dataList(caseList){
                 if(caseList){
                     var dataIndex = caseList - 1;
-                    $( '.m-article-title' ).find( '.bd-ul' ).attr('data-index', dataIndex + 1)
+                    $( '.m-article-title' ).find( '.item-go' ).attr('data-index', dataIndex + 1);
                     $( '.m-article-title' ).find( '.item-bd' ).html( HomeCtrl.caseList[dataIndex].title );
-                    $( '.m-article-title' ).find( '.item-ft' ).html( HomeCtrl.caseList[dataIndex].content );
+                    $( '.m-article-title' ).find( '.item-ft' ).html( HomeCtrl.formatBody(HomeCtrl.caseList[dataIndex].body) );
                 }
 
             }
 
-            //each and loading images
-            $('.data-img').each(function(){
-                var data_src = $(this).attr('data-source');
-                var dom_path = "assets/images/";
-                if(index.window_width < 500){
-                    dom_path = "assets/images/mobile/m-";
-                };
-                var img_path = dom_path+data_src;
-                if(data_src){
-                    $(this).attr('src',img_path);
-                };
-            });
-
             //click moveSectionUp-btn
             $('#moveSectionUp-btn').hammer().bind("tap",function(){
                 $('#fullpage').fullpage.moveSectionUp();
-            })
+            });
             //click moveSectionDown-btn
             $('#moveSectionDown-btn').hammer().bind("tap",function(){
                 $('#fullpage').fullpage.moveSectionDown();
-            })
+            });
 
             $('.container-list-btn').hammer().bind('tap',function(){
                 index.heardVideo.play();//导航视频播放

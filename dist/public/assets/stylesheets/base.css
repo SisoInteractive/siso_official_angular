@@ -684,6 +684,13 @@
   bottom: 6%;
   left: 0%;
 }
+.container-list .more img {
+  transition: all 0.3s;
+}
+.container-list .more:hover img {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
 .container-list .theme-frame {
   padding: 0px!important;
 }
@@ -817,7 +824,7 @@
   float: left;
   -webkit-transition: all .5s;
 }
-.m-mostRecent .mostRecent-body .ul .left {
+.m-mostRecent .mostRecent-body .ul .letf {
   width: 50%;
 }
 .m-mostRecent .mostRecent-body .ul .right {
@@ -1182,7 +1189,7 @@
   #fullpage .section {
     background: none!important;
   }
-  .m-mostRecent .mostRecent-body .ul .left,
+  .m-mostRecent .mostRecent-body .ul .letf,
   .m-mostRecent .mostRecent-body .ul .right {
     width: 100%;
   }
