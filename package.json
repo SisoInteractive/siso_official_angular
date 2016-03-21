@@ -1,0 +1,28 @@
+{
+  "name": "siso_interactive_team",
+  "version": "1.0.0",
+  "description": "website for customer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-asset-injector": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-pagespeed": "^1.0.0",
+    "load-grunt-tasks": "*"
+  },
+  "devDependencies": {
+    "grunt-string-replace": "^1.2.0"
+  }
+}

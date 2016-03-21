@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery.bxslider.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=h9pduEwXe3GSRE9kOlmWt3rW"></script>
+
+    <!-- injector:css -->
+    <!-- basic css-->
+    <link rel="stylesheet/less" href="assets/stylesheets/base.less"/>
+    <link rel="stylesheet/less" href="assets/stylesheets/index.less"/>
+    <link rel="stylesheet/less" href="assets/stylesheets/m-company.less"/>
+    <link rel="stylesheet/less" href="assets/stylesheets/news.less"/>
+    <link rel="stylesheet/less" href="assets/stylesheets/m-careers.less"/>
+    <link rel="stylesheet/less" href="assets/stylesheets/about.less"/>
+    <!-- endinjector -->
+
+    <!--[if lt IE9]>
+    <script src="assets/scripts/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        },true);
+    </script>
+</head>
+<body>
+<div style="overflow: hidden;width: 100%;position: relative;height: 100%;">
+<!-- header -->
+<header class="header active">
+
+    <div class="theme-frame-border ">&nbsp;</div>
+    <div class="theme-frame-bg">&nbsp;</div>
+    <div  class="toggle-btn toggle">
+        <img src="assets/images/close.png" class="nav04" width="35px">
+    </div>
+    <div class="theme-frame m-header ">
+        <div class="left-box-body">
+            <img src="assets/images/logo.png" class="logo">
+            <div class="content">
+                <!-- nav -->
+                <div class="m-nav">
+                    <div class="m-nav-hd fz10Regular">NAVIGATION</div>
+                    <div class="m-nav-bd">
+                        <ul>
+                            <li><a class="toggle">HOME</a></li>
+                            <li class="toggle-company"><a >COMPANY</a></li>
+                            <li class="toggle-mostRecent"><a>CASE STUDIES</a></li>
+                            <li><a >SERVICES</a></li>
+                            <li class="toggle-careers"><a >CAREERS</a></li>
+                            <li>&nbsp;</li>
+                            <li class="toggle-news"><a >NEWS</a></li>
+                            <li class="toggle-about"><a >CONTACTS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="nav-text fz10Regular">Lorem ispum. Proin at eros non eros adipiscing mollis. Donec ipsum, porta nec, tempor id, auctor vitae, purus. Pellentesque neque. Nulla luctus erat vitae libero. Integer nec enim. Phasellus aliquam enim et tortor.</p>
+            </div>
+            <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+        </div>
+
+    </div>
+
+</header>
+<!-- end header -->
+
+<!-- container-list -->
+<section class="container-list active">
+    <div  class="toggle-btn container-list-btn">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <!-- m-article-title -->
+    <div class="m-article-title">
+        <div class="title-bg">&nbsp;</div>
+        <img src="assets/images/logo.png" class="logo" >
+        <div class="content">
+            <div class="bd">
+                <ul class="bd-ul item-go" data-index="1">
+                    <li class="item-hd" >CASE STUDIES</li>
+                    <li >Microsoft</li>
+                    <li >Beijing Innovation Centre</li>
+                    <li class="item-ft" >Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="more">
+                <img src="assets/images/more-btn.png">
+            </a>
+            <!-- move-btn -->
+            <div class="move-box">
+                <span class="moveSectionUp-btn ">
+                &nbsp;
+                </span>
+                <span class="moveSectionDown-btn ">
+                &nbsp;
+                </span>
+            </div>
+        </div>
+        <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+    </div>
+
+
+
+
+
+
+    <div id="fullpage" class="section-bg">
+        <!-- scene -->
+
+        <div class="section scene02">
+            <div class="theme-frame">
+                <ul  class="frame-bg">
+                    <li class="layer layer-m" data-depth="0.10" >
+                        <img data-source="bg02.png" width="100%"   class="data-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section scene03">
+            <div class="theme-frame">
+                <ul  class="frame-bg">
+                    <li class="layer" data-depth="0.10" >
+                        <img data-source="bg03.png"  width="100%" style="margin-left: 2%"  class="data-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section scene04">
+            <div class="theme-frame">
+                <ul  class="frame-bg">
+                    <li class="layer" data-depth="0.10" >
+                        <img data-source="bg04.png"  width="100%"  class="data-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section scene05">
+            <div class="theme-frame">
+                <ul  class="frame-bg">
+                    <li class="layer" data-depth="0.10" >
+                        <img data-source="bg05.png"  width="100%"   class="data-img">
+                    </li>
+                    <li class="layer" data-depth="0.33" >
+                        <img data-source="bg05-01.png" style="margin-top: 40%"  width="100%"   class="data-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- scene -->
+    </div>
+</section>
+<!-- end container-list -->
+
+<!-- m-mostRecent -->
+<div class="m-mostRecent " style="display: block;">
+
+    <div  class="toggle-btn mostRecent-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+
+    <div class="mostRecent-body" id="">
+
+        <ul class="ul frame-bg" id="mostRecent-wrapper" >
+
+            <li class="letf item-box">
+                <ul>
+                    <li class="item half typeOne item-go" data-index="1">
+                        <div class="item-img"><img src="assets/images/mostRecent01.jpg" width="100%"></div>
+                        <div class="bg"></div>
+                        <ul data-index="1">
+                            <li class="item-hd ">CASE STUDIES</li>
+                            <li class="">Microsoft</li>
+                            <li class="">Beijing Innovation </li>
+                            <li class="">Centre</li>
+                            <li class="item-ft ">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+
+                    <li class="item half typeOne show item-go" data-index="2">
+                        <div class="item-img" style="background: #ffcc00">&nbsp;</div>
+                        <div class="bg"></div>
+                        <ul >
+                            <li class="item-hd">CASE STUDIES</li>
+                            <li class="">Microsoft</li>
+                            <li class="">Beijing Innovation </li>
+                            <li class="">Centre</li>
+                            <li class="item-ft ">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+                    <li class="item quarter">
+                        <div class="item-img"><img src="assets/images/mostRecent06.jpg" width="100%"></div>
+
+                    </li>
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent07.jpg" width="100%"></div>
+
+                    </li>
+
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent08.jpg" width="100%"></div>
+
+                    </li>
+
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent09.jpg" width="100%"></div>
+
+                    </li>
+                    <li class="item half typeOne">
+                        <div class="item-img"><img src="assets/images/mostRecent12.jpg" width="100%" alt=""/></div>
+                        <div class="bg"></div>
+                        <ul data-index="2">
+                            <li class="item-hd item-go">CASE STUDIES</li>
+                            <li class="item-go">Microsoft</li>
+                            <li class="item-go">Beijing Innovation </li>
+                            <li class="item-go">Centre</li>
+                            <li class="item-ft item-go">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+            </li>
+            <li class="right item-box">
+                <ul>
+                    <li class="item half typeOne">
+                        <div class="item-img"><img src="assets/images/mostRecent02.jpg" width="100%"></div>
+                        <div class="bg"></div>
+                        <ul data-index="1">
+                            <li class="item-hd item-go">CASE STUDIES</li>
+                            <li class="item-go">Microsoft</li>
+                            <li class="item-go">Beijing Innovation </li>
+                            <li class="item-go">Centre</li>
+                            <li class="item-ft item-go">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent03.jpg" width="100%"></div>
+
+                    </li>
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent04.jpg" width="100%"></div>
+                    </li>
+                    <li class="item half typeOne">
+                        <div class="item-img"><img src="assets/images/mostRecent05.jpg" width="100%"></div>
+                        <div class="bg"></div>
+                        <ul data-index="1">
+                            <li class="item-hd item-go">CASE STUDIES</li>
+                            <li class="item-go">Microsoft</li>
+                            <li class="item-go">Beijing Innovation </li>
+                            <li class="item-go">Centre</li>
+                            <li class="item-ft item-go">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent10.jpg" width="100%"></div>
+
+                    </li>
+
+                    <li class="item quarter" >
+                        <div class="item-img"><img src="assets/images/mostRecent11.jpg" width="100%"></div>
+                    </li>
+
+                    <li class="item half typeOne">
+                        <div class="item-img"><img src="assets/images/mostRecent13.jpg" width="100%" alt=""/></div>
+                        <div class="bg"></div>
+                        <ul data-index="2">
+                            <li class="item-hd item-go">CASE STUDIES</li>
+                            <li class="item-go">Microsoft</li>
+                            <li class="item-go">Beijing Innovation </li>
+                            <li class="item-go">Centre</li>
+                            <li class="item-ft item-go">Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+    </div>
+</div>
+<!-- end m-mostRecent -->
+
+<!-- m-case-detail -->
+<div class="m-case-detail" style="display: block ;">
+    <div  class="toggle-btn detail-wrapper-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="detail-wrapper" id="detail-wrapper" style="-webkit-transform: translate3d(0px, 0px,0px);">
+
+
+        <div class="detail-item" >
+        <div class="detail-item-body">
+            <div class="myVideo-box">
+                <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/vedio-bg01.jpg">
+                    <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+                </video>
+                <div class="myVideo_zz">&nbsp;</div>
+                <a class="playVideo-btn"><img src="assets/images/playVideo-btn.png" width="100%"></a>
+            </div>
+
+            <!-- m-detail-description -->
+            <div class="detail-description">
+                <div class="m-body">
+                    <div class="bd clearfix">
+                        <img src="assets/images/detail-logo.png" class="detail-logo">
+                        <h2 class="">WORLD VIEW <br>WEBSITE</h2>
+                        <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    </div>
+                    <div class="ft">
+                        <ul>
+                            <li>
+                                <p class="dt">Project</p>
+                                <p class="dd">Website for World View</p>
+                            </li>
+                            <li>
+                                <p class="dt">Deliverables</p>
+                                <p class="dd">Concept, Design, Development</p>
+                            </li>
+                            <li>
+                                <p class="dt">Project Cycle</p>
+                                <p class="dd">35days</p>
+                            </li>
+                            <li>
+                                我要再这站位
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- end m-body  -->
+            <div class="detail-bxslider">
+                <ul class="bxslider clearfix">
+                    <li>
+                        <div class="Drag-banner-box">
+                            <img src="assets/images/case_detail_banner2.jpg" class="Drag-banner2 Drag-banner-bg">
+                            <img src="assets/images/case_detail_banner1.jpg" class="Drag-banner-img "/>
+                            <div class="Drag-btn">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li><img src="assets/images/case_detail_banner2.jpg"/></li>-->
+                </ul>
+                <a class="bx-prev bx-btn" href="#"><img src="assets/images/arrowhead7.png" width="100%" alt=""/></a>
+                <a class="bx-next bx-btn" href="#"><img src="assets/images/arrow487.png" width="100%" alt=""/></a>
+            </div>
+
+            <!-- m-detail-description -->
+            <div class="detail-description-two">
+                <div class="m-body">
+                    <h2>THE STROY</h2>
+                    <div class="bd clearfix">
+                        <div class="left-box fl">
+                            frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as well as nine individual products.
+                            Several rounds of ethnographic and market research were conducted to identify target segments. Three distinct customer groups emerged with clear preferences around features, functionality, price, and of course, style.
+                        </div>
+                        <div class="right-box fl">
+                            With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style. Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <img src="assets/images/case_detail_banner3.jpg" width="100%" class="detail-bxslider-two">
+
+            <div class="detail-description-three clearfix">
+                <dl class="fl detail-up">
+                    <img src="assets/images/prev.png">
+                    <dt>Doin websitebrand plate design</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat.</dd>
+                </dl>
+                <dl class="fl  detail-down">
+                    <img src="assets/images/next.png" alt=""/>
+                    <dt>Doin websitebrand plate design</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat.</dd>
+                </dl>
+            </div>
+
+            <!-- detail-description-five -->
+            <div class="detail-description-five">
+                <h2>RELATED CASE STUDIES</h2>
+                <div class="bd">
+                    <ul>
+                        <li><img src="assets/images/case_studies01.jpg" width="100%"></li>
+                        <li><img src="assets/images/case_studies02.jpg" width="100%"></li>
+                        <li><img src="assets/images/case_studies03.jpg" width="100%"></li>
+                        <li><img src="assets/images/case_studies04.jpg" width="100%"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        <div class="detail-item" >
+            <div class="detail-item-body">
+                <div class="myVideo-box">
+                    <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/vedio-bg03.jpg">
+                        <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+                    </video>
+                    <div class="myVideo_zz">&nbsp;</div>
+                    <a class="playVideo-btn"><img src="assets/images/playVideo-btn.png" width="100%"></a>
+                </div>
+
+                <!-- m-detail-description -->
+                <div class="detail-description">
+                    <div class="m-body">
+                        <div class="bd clearfix">
+                            <img src="assets/images/detail-logo03.png" class="detail-logo">
+                            <h2 class="">JD.COM</h2>
+                            <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        </div>
+                        <div class="ft">
+                            <ul>
+                                <li>
+                                    <p class="dt">Project</p>
+                                    <p class="dd">Website for World View</p>
+                                </li>
+                                <li>
+                                    <p class="dt">Deliverables</p>
+                                    <p class="dd">Concept, Design, Development</p>
+                                </li>
+                                <li>
+                                    <p class="dt">Project Cycle</p>
+                                    <p class="dd">35days</p>
+                                </li>
+                                <li>
+                                    我要再这站位
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- end m-body  -->
+                <div class="detail-bxslider">
+                    <ul class="bxslider clearfix">
+                        <li><img src="assets/images/case_detail_banner6.jpg"/></li>
+                    </ul>
+                    <a class="bx-prev bx-btn" href="#"><img src="assets/images/arrowhead7.png" width="100%" alt=""/></a>
+                    <a class="bx-next bx-btn" href="#"><img src="assets/images/arrow487.png" width="100%" alt=""/></a>
+                </div>
+
+                <!-- m-detail-description -->
+                <div class="detail-description-two">
+                    <div class="m-body">
+                        <h2>THE STROY</h2>
+                        <div class="bd clearfix">
+                            <div class="left-box fl">
+                                frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy,
+                                <img src="assets/images/case_detail_JD618.jpg" class="text-img" >
+                                a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as well as nine individual products.
+                                Several rounds of ethnographic and market research were conducted to identify target segments. Three distinct customer groups emerged with clear preferences around features, functionality, price, and of course, style.
+                            </div>
+                            <div class="right-box fl">
+                                With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style. Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="assets/images/case_detail_banner7.jpg" width="100%" class="detail-bxslider-two">
+
+                <!-- m-detail-description -->
+                <div class="detail-description-two">
+                    <div class="m-body">
+                        <h2>THE STROY</h2>
+                        <div class="bd clearfix">
+                            <div class="left-box fl">
+                                frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio.
+                                To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as well as nine individual products.
+
+                                Several rounds of ethnographic and market research were conducted to identify target segments. Three distinct customer groups emerged with clear preferences around features, functionality, price, and of course, style.
+                            </div>
+                            <div class="right-box fl">
+                                With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style. Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- detail-description-three -->
+
+                <div class="detail-description-three clearfix">
+                    <dl class="fl detail-up">
+                        <img src="assets/images/prev.png">
+                        <dt>Doin websitebrand plate design</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat.</dd>
+                    </dl>
+                    <dl class="fl  detail-down">
+                        <img src="assets/images/next.png" alt=""/>
+                        <dt>Doin websitebrand plate design</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat.</dd>
+                    </dl>
+                </div>
+
+                <!-- detail-description-five -->
+                <div class="detail-description-five">
+                    <h2>RELATED CASE STUDIES</h2>
+                    <div class="bd">
+                        <ul>
+                            <li><img src="assets/images/case_studies01.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies02.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies03.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies04.jpg" width="100%"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="detail-item" >
+            <div class="detail-item-body">
+                <div class="myVideo-box">
+                    <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/vedio-bg02.jpg">
+                        <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+                    </video>
+                    <div class="myVideo_zz">&nbsp;</div>
+                    <a class="playVideo-btn"><img src="assets/images/playVideo-btn.png" width="100%"></a>
+                </div>
+
+                <!-- m-detail-description -->
+                <div class="detail-description">
+                    <div class="m-body">
+                        <div class="bd clearfix">
+                            <img src="assets/images/detail-logo02.png" class="detail-logo">
+                            <h2 class="">DOIN’<br>WEBSITE</h2>
+                            <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        </div>
+                        <div class="ft">
+                            <ul>
+                                <li>
+                                    <p class="dt">Project</p>
+                                    <p class="dd">Website for World View</p>
+                                </li>
+                                <li>
+                                    <p class="dt">Deliverables</p>
+                                    <p class="dd">Concept, Design, Development</p>
+                                </li>
+                                <li>
+                                    <p class="dt">Project Cycle</p>
+                                    <p class="dd">35days</p>
+                                </li>
+                                <li>
+                                    我要再这站位
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end m-body  -->
+                <div class="detail-description-touch" id="detail-description-touch" >
+                    <img src="assets/images/case_detail_banner4.jpg" width="3600" class="detail-description-touch-img" id="detail-description-touch-img">
+                    <span class="touch-left touch-span" data-direction="left" >&nbsp;</span>
+                    <span class="touch-right touch-span" data-direction="right">&nbsp;</span>
+                </div>
+
+                <!-- m-detail-description -->
+                <div class="detail-description-two">
+                    <div class="m-body">
+                        <h2>THE STROY</h2>
+                        <div class="bd clearfix">
+                            <div class="left-box fl">
+                                frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as well as nine individual products.
+                                Several rounds of ethnographic and market research were conducted to identify target segments. Three distinct customer groups emerged with clear preferences around features, functionality, price, and of course, style.
+                            </div>
+                            <div class="right-box fl">
+                                With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style. Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <img src="assets/images/case_detail_banner5.jpg" width="100%" class="detail-bxslider-two">
+
+                <div class="detail-description-three clearfix">
+                    <dl class="fl detail-up">
+                        <img src="assets/images/prev.png">
+                        <dt>Doin websitebrand plate design</dt>
+                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat.</dd>
+                    </dl>
+
+                </div>
+
+                <!-- detail-description-five -->
+                <div class="detail-description-five">
+                    <h2>RELATED CASE STUDIES</h2>
+                    <div class="bd">
+                        <ul>
+                            <li><img src="assets/images/case_studies01.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies02.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies03.jpg" width="100%"></li>
+                            <li><img src="assets/images/case_studies04.jpg" width="100%"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- end m-case-detail -->
+
+<!-- m-company -->
+<div class="m-company" style="display: block ;">
+    <div  class="toggle-btn m-company-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="m-company-wrapper m-company"  style="-webkit-transform: translate3d(0px, 0px,0px);">
+        <div class="m-company-body">
+            <div class="myVideo-box">
+                <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/video-company.jpg">
+                    <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+                </video>
+                <div class="myVideo_zz">&nbsp;</div>
+                <a class="playVideo-btn"><img src="assets/images/playVideo-btn.png" width="100%"></a>
+            </div>
+            <div class="m-company-one-box box-shadow">
+                <span>COMPANY</span>
+                <h2>ABOUT</h2>
+                <p>Lorem ispum. Proin at eros non eros adipiscing mollis. Donec ipsum, porta nec, tempor id, auctor vitae, purus. Pellentesque neque. Nulla luctus erat vitae libero. Integer nec enim. Phasellus aliquam enim et tortor.</p>
+            </div>
+            <div class="m-company-two-box box-shadow">
+                <ul>
+                    <li class="li">
+                        <img src="assets/images/company-people-one.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-two.jpg" width="100%" alt=""/>
+                        <p class="hd">Wayne Wu</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-three.jpg" width="100%" alt=""/>
+                        <p class="hd">Robin Zhang</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-four.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                </ul>
+            </div>
+            <img src="assets/images/company-banner-one.jpg" width="100%" alt="" class="company-banner"/>
+            <div class="m-company-one-box box-shadow">
+                <span>COMPANY</span>
+                <h2>TEAM</h2>
+                <p>Lorem ispum. Proin at eros non eros adipiscing mollis. Donec ipsum, porta nec, tempor id, auctor vitae, purus. Pellentesque neque. Nulla luctus erat vitae libero. Integer nec enim. Phasellus aliquam enim et tortor.</p>
+            </div>
+            <div class="m-company-two-box multiple box-shadow">
+                <ul>
+                    <li class="li ">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Wayne Wu</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Robin Zhang</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Kevin Cao</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                    <li class="li">
+                        <img src="assets/images/company-people-cshi.jpg" width="100%" alt=""/>
+                        <p class="hd">Reagan Zheng</p>
+                        <p class="bd">General Manager / Partner</p>
+                    </li>
+                </ul>
+            </div>
+            <img src="assets/images/company-banner-two.jpg" width="100%" alt=""/>
+            <div class="m-company-one-box box-shadow">
+                <span>COMPANY</span>
+                <h2>JOIN US</h2>
+                <p>Lorem ispum. Proin at eros non eros adipiscing mollis. Donec ipsum, porta nec, tempor id, auctor vitae, purus. Pellentesque neque. Nulla luctus erat vitae libero. Integer nec enim. Phasellus aliquam enim et tortor.</p>
+                <a class="next" style="margin-top: 84px;">
+                    <img src="assets/images/next1.png">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+<!-- end m-company -->
+
+<!-- m-news -->
+<div class="m-news" style="display: block;">
+
+    <img src="assets/images/logo.png" class="logo" >
+    <div  class="toggle-btn m-news-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="myVideo-box">
+        <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/news-bg.jpg">
+            <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+        </video>
+    </div>
+    <div class="m-news-body">
+        <div class="bd">
+            <h2 class="title calculate-height">NEWS</h2>
+            <div class="item-box">
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>July 9, 2015</dt>
+                    <dd class="hd">Sound United identified a $100 million business opportunity in personal audio. </dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end m-news -->
+
+<!-- m-careers -->
+<div class="m-careers" style="display: block;">
+
+    <img src="assets/images/logo.png" class="logo" >
+    <div  class="toggle-btn m-careers-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="myVideo-box">
+        <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/careers-bg.jpg">
+            <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+        </video>
+    </div>
+    <div class="m-news-body">
+        <div class="bd">
+            <h2 class="title calculate-height">CAREERS</h2>
+            <p class="calculate-height"><img src="assets/images/careers-bg.jpg" class="m-careers-img" alt="" width="100%"/></p>
+            <p class="title-content calculate-height">We believe in a balanced environment, where positivity, hard work and happy hours coexist. While much of our time is spent at our desks or in meetings, we've created a culture that makes the outside world an integral part of our daily working routines.</p>
+            <div class="item-box">
+                <dl>
+                    <dd class="hd">LEAD UI / UX DESIGNER</dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="hd">LEAD UI / UX DESIGNER</dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="hd">LEAD UI / UX DESIGNER</dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="hd">LEAD UI / UX DESIGNER</dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd class="hd">LEAD UI / UX DESIGNER</dd>
+                    <dd class="content-dd">
+                        <img src="assets/images/news-01.png" alt=""/>
+                        <p>frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic competitors. Protein leather headphones and contrast stitching reflect the same attention to detail as the rich warm soundstage.frog and home speaker manufacturer Sound United identified a $100 million business opportunity in personal audio. To compete with lifestyle brand leaders, Sound United asked frog to develop a long-view strategy, a portfolio of new products, and a refresh of Sound United's brands; BOOM, Polk and Definitive Technologies. We created unique brand position for the brands as With a mixture of vintage and modern styling, Polk Audio's classic appeal resonates with consumers nostalgic for heritage products. With Polk Audio’s Nue Era headphones, the rebranded line introduces itself as a heritage brand tailored to music lovers who value personal style.</p>
+                        <p>Tortoise and champagne gold finishing harken back an era of handcrafted devices, while state-of-the-art headphone technology provides immersive sound in a small package. The Buckle and Hinge feature real metal construction that stands out in a sea of plastic  to detail as the rich warm soundstage.</p>
+                    </dd>
+                </dl>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- end m-careers -->
+
+<!-- about -->
+<div class="about clearfix">
+    <img src="assets/images/logo.png" class="logo" >
+    <div  class="toggle-btn about-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="about-address-map fl">
+        <div class="allmap" id="allmap"></div>
+    </div>
+    <div class="about-address-box fl">
+        <h2 class="title">CONTACTS</h2>
+        <p class="subtitle">We believe in a balanced environment, where positivity, hard work and happy hours coexist. While much of our time is spent at our desks or in meetings, we've created a culture that makes the outside world an integral part of our daily working routines.</p>
+        <dl>
+            <dt>Shanghai</dt>
+            <dd>
+                <p>A : 599 3rd Street, Suite 301 San Francisco, CA 94107, USA</p>
+                <p>T : +86-21-6157-7188</p>
+                <p>M : Hi_sh@sisobrand.com</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Shenzhen </dt>
+            <dd>
+                <p>A : 80 Franklin Street, Suite 1 New York, NY 10013, USA</p>
+                <p>T : +86-21-6157-7188</p>
+                <p>M : Hi_sz@sisobrand.com</p>
+            </dd>
+        </dl>
+
+    </div>
+
+
+
+
+</div>
+<!--end about  -->
+
+</div>
+
+
+
+<!-- injector:js -->
+<!-- page script -->
+<script src="//localhost:35729/livereload.js"></script>
+<script src="assets/scripts/jquery-2.1.3.min.js"></script>
+<script src="assets/scripts/jquery.parallax.js" ></script>
+<script src="assets/scripts/jquery.fullPage.js" ></script>
+<script src="assets/scripts/hammer.min.js"></script>
+<script src="assets/scripts/jquery.hammer.js"></script>
+<script src="common/index.js"></script>
+<script src="assets/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/scripts/jquery.bxslider.min.js"></script>
+<!-- end page script -->
+
+<!-- less compiler -->
+<script src="assets/scripts/less.min.js"></script>
+<!-- endinjector -->
+</body>
+</html>

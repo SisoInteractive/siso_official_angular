@@ -1,0 +1,27 @@
+
+<div   class="m-careers">
+    <img src="assets/images/logo.png" class="logo" >
+    <div  class="toggle-btn m-careers-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="myVideo-box">
+        <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/careers-bg.jpg">
+            <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+        </video>
+    </div>
+    <div class="m-news-body">
+        <div class="bd">
+            <h2 class="title calculate-height">CAREER</h2>
+            <p class="calculate-height"><img src="assets/images/careers-bg.jpg" class="m-careers-img" alt="" width="100%"/></p>
+            <p class="title-content calculate-height">We believe in a balanced environment, where positivity, hard work and happy hours coexist. While much of our time is spent at our desks or in meetings, we've created a culture that makes the outside world an integral part of our daily working routines.</p>
+            <div class="item-box">
+                <dl ng-repeat="career in CareerCtrl.careerList" on-last-repeat>
+                    <dt class="hd">{{career.title}}</dt>
+                    <dd class="content-dd" ng-bind-html=" CareerCtrl.formatBody(career.body) | to_trusted "></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

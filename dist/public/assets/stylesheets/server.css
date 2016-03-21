@@ -1,0 +1,213 @@
+.m-server {
+  background: #4e4e4e;
+  height: 100%;
+  border: 20px solid #5a5a5a;
+  border-right: none;
+  margin-right: 20px;
+}
+.m-server .toggle-btn {
+  right: 25px;
+}
+.m-server .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  z-index: 99;
+}
+.m-server .content {
+  padding: 160px 0 0 0;
+  margin: 0px 25px;
+  height: 100%;
+}
+.m-server .server-list {
+  padding: 60px;
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  transition: all 1s;
+}
+.m-server .server-list h3 {
+  height: 90px;
+  padding-top: 20px;
+  font-size: 32px;
+  color: #cccccc;
+  transition: all 1s;
+}
+.m-server .server-list h3 p {
+  font-size: 22px;
+  padding: 6px;
+}
+.m-server .server-list .description {
+  transition: all 1s;
+  padding-top: 10px;
+  font-size: 18px;
+  height: 80px;
+  overflow: hidden;
+  color: #9b9b9b;
+}
+.m-server .server-list .server-logo {
+  width: 100%;
+  text-align: center;
+  height: 88px;
+}
+.m-server .server-list .server-logo span {
+  margin: 0 auto;
+  display: block;
+  width: 88px;
+  height: 88px;
+  background: url("../images/server-icon.png") no-repeat;
+}
+.m-server .server-list:nth-child(odd) {
+  background: #333333;
+}
+.m-server .server-list:nth-child(even) {
+  background: #3b3b3b;
+}
+.m-server .server-list:hover {
+  background: #f4b51a;
+}
+.m-server .server-list:hover h3 {
+  color: #000;
+}
+.m-server .server-list:hover .description {
+  color: #866209;
+}
+.m-server .server-list:nth-child(1) .server-logo span {
+  background-position: 0 0px;
+}
+.m-server .server-list:hover:nth-child(1) .server-logo span {
+  background-position: 0px -88px;
+}
+.m-server .server-list:nth-child(2) .server-logo span {
+  background-position: -88px -1px;
+}
+.m-server .server-list:hover:nth-child(2) .server-logo span {
+  background-position: -88px -88px;
+}
+.m-server .server-list:nth-child(3) .server-logo span {
+  background-position: -174px 0px;
+}
+.m-server .server-list:hover:nth-child(3) .server-logo span {
+  background-position: -174px -88px;
+}
+.m-server .server-list:nth-child(4) .server-logo span {
+  background-position: -261px -88px;
+}
+.m-server .server-list:hover:nth-child(4) .server-logo span {
+  background-position: -261px -88px;
+}
+.m-server .server-list:nth-child(5) .server-logo span {
+  background-position: -348px 0px;
+}
+.m-server .server-list:hover:nth-child(5) .server-logo span {
+  background-position: -348px -88px;
+}
+.m-server .server-list:nth-child(6) .server-logo span {
+  background-position: -435px 0px;
+}
+.m-server .server-list:hover:nth-child(6) .server-logo span {
+  background-position: -435px -88px;
+}
+.m-server .mCSB_inside > .mCSB_container {
+  margin-right: 20px;
+}
+.m-server .mCSB_dragger_bar {
+  width: 20px!important;
+  margin: 0 0px !important;
+  border-radius: 0!important;
+  background: #ffbf00!important;
+}
+.m-server .mCSB_scrollTools {
+  width: 20px;
+  position: absolute;
+  right: 0px;
+  background: #000;
+}
+.m-server .mCSB_draggerRail {
+  background: #f0f0f0 !important;
+}
+.m-server .mCSB_scrollTools .mCSB_draggerRail {
+  border-radius: 0!important;
+}
+.m-server .mCustomScrollBox {
+  width: 100%;
+  height: 100%;
+}
+.m-server .mCS-inset.mCSB_scrollTools .mCSB_draggerRail {
+  width: 20px !important;
+}
+@media screen and (max-width: 1624px) {
+  .m-server .server-list h3 {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .m-server .server-list h3 {
+    height: 170px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .m-server .server-list {
+    width: 100%;
+  }
+  .m-server .server-list h3 {
+    font-size: 22px;
+    height: 80px;
+  }
+  .m-server .server-list h3 p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .m-server {
+    border: 10px solid #5a5a5a;
+    margin-right: 10px;
+    border-right: none;
+  }
+  .m-server .content {
+    margin: 0 15px;
+    padding: 100px 0;
+  }
+  .m-server .logo {
+    width: 120px;
+    top: 10px;
+    left: 10px;
+  }
+  .m-server .toggle-btn {
+    right: 15px!important;
+  }
+  .m-server .mCSB_inside > .mCSB_container {
+    margin-right: 10px;
+  }
+  .m-server .mCSB_dragger_bar {
+    width: 10px!important;
+    margin: 0 0px !important;
+    border-radius: 0!important;
+    background: #ffbf00!important;
+  }
+  .m-server .mCSB_scrollTools {
+    width: 10px;
+    position: absolute;
+    right: 0px;
+  }
+  .m-server .mCS-inset.mCSB_scrollTools .mCSB_draggerRail {
+    width: 10px !important;
+  }
+  .m-server .server-list:nth-child(odd) {
+    background: #333333 !important;
+  }
+  .m-server .server-list:nth-child(even) {
+    background: #3b3b3b !important;
+  }
+  .m-server h3 {
+    color: #cccccc!important;
+  }
+  .m-server .description {
+    color: #9b9b9b!important;
+  }
+  .m-server .server-logo span {
+    background: url("../images/server-icon.png") no-repeat;
+    background-position-y: 0 !important;
+  }
+}

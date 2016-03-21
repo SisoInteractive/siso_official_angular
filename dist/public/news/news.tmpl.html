@@ -1,0 +1,27 @@
+<!-- m-news -->
+<div  class="m-news">
+    <img src="assets/images/logo.png" class="logo" >
+    <div  class="toggle-btn m-news-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <div class="myVideo-box">
+        <video class="myVideo" webkit-playsinline="true" x-webkit-airplay="true" preload="none" poster="assets/images/news-bg.jpg">
+            <source src="http://minkbooks.com/content/trailer.mp4 "  type="video/mp4">
+        </video>
+    </div>
+    <div class="m-news-body">
+        <div class="bd">
+            <h2 class="title calculate-height">NEWS</h2>
+            <div class="item-box">
+                <dl ng-repeat="newList in NewsCtrl.newList" on-last-repeat>
+                    <dt>{{newList.time}}</dt>
+                    <dd class="hd">{{newList.title}}</dd>
+                    <dd class="content-dd" ng-bind-html=" newList.content | to_trusted "></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</div>

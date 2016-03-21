@@ -1,0 +1,229 @@
+//  Created by ao tu (Siso brand interactive team.) 2015
+
+/*======================================================================
+      m-company
+  ======================================================================*/
+.m-careers{
+  position: absolute;
+  background: #efefef;
+  width: 100%;
+  height: 100%;
+  border: 20px solid #efefef;
+  border-right: none;
+  top: 0;
+  -webkit-transition: -webkit-transform .8s;
+  -webkit-transform: translate3d(0%,0px,0);
+  -webkit-transition-timing-function:cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.m-careers.active{
+  z-index: 999;
+  -webkit-transform: translate3d(0%,0px,0);
+}
+
+.m-careers{
+  .m-careers-img{
+    padding: 30px 0 0 0;
+    display: none;
+  }
+
+  .toggle-btn{
+    top: 20px;
+    right: 40px;
+  }
+
+  .title-content{
+    font-size: 18px;
+    color: #666666;
+    padding: 40px 50px 40px 0;
+    font-weight: inherit;
+  }
+  .mCSB_inside>.mCSB_container{  margin-right: 20px}
+  .mCSB_dragger_bar{  width: 20px!important;  margin: 0 0px !important;  border-radius:0!important;  background: #ffbf00!important;  }
+  .mCSB_scrollTools{  width: 20px;  }
+  .mCSB_draggerRail{  background: #f0f0f0 !important;  }
+  .mCSB_scrollTools .mCSB_draggerRail{  border-radius: 0!important;  }
+  .mCustomScrollBox{  width: 100%;height: 100%;  }
+  .mCS-inset.mCSB_scrollTools .mCSB_draggerRail{ width: 20px !important; }
+  .m-company-body{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height:100%;
+  }
+  //logo
+  .logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: block;
+    z-index: 99;
+  }
+  .myVideo-box{
+    width: 100%;
+    height: 100%;
+  }
+  .myVideo{
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+    display: block;
+    border: none;
+  }
+
+  .m-news-body{
+    position: absolute;
+    top: 0;
+    background: #fff;
+    left: 50%;
+    height: 100%;
+    opacity: .95;
+    h2{
+      font-size: 10px;
+      color: #ccc;
+    }
+
+    .bd{
+      padding: 80px 0 0 80px;
+    }
+
+    .item-box{
+      width: 90%;
+      dl{
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .content-dd{
+        display: none;
+        img{
+          padding: 10px 0;
+          width: 100%;
+        }
+        p{
+          padding: 5px 0;
+          font-size: 18px;
+          color: #888;
+        }
+      }
+    }
+
+    dl{
+      padding-top: 37px;
+      padding-bottom: 33px;
+    }
+
+    dt{
+      color: #999;
+    }
+    dt{
+      color: #333333;
+      font-size: 36px;
+      cursor:pointer;
+      font-family: CasperBold;
+      padding-bottom: 20px;
+    }
+    dd{
+      font-size: 18px;
+      color: #999;
+    }
+
+  }
+
+  .icon{height:20px; width:20px; display:block; position:absolute;right: 0px; top:40px;-webkit-transition: all .8s;-webkit-transform:rotate(0deg);}
+  .icon.active{-webkit-transform:rotate(180deg);}
+  .icon.active:after{ opacity: 0;-webkit-transition: all .8s; }
+  .icon-add:before, .icon-add:after{content:''; height:4px; width:22px; display:block; background:#999; position:absolute; top:9px; left:0px;}
+  .icon-add:after{height:22px; width:4px; top:0; left:9px; opacity: 1 }
+
+}
+
+
+
+
+
+
+@media screen and (max-width:1000px ) {
+  .m-news-body dd{
+    font-size: 30px;
+  }
+}
+
+
+@media screen and (max-width:800px ) {
+  .m-news-body dd{
+    font-size: 20px;
+  }
+  .m-news-body{
+    width: 100%;
+    left: 0;
+    position: relative;
+    border-top: 20px solid #efefef;
+    z-index: 10;
+    .bd{
+      padding: 40px 0 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width:500px ) {
+  .m-careers{
+
+    .m-careers-img{
+      padding: 30px 0 0 0;
+      display: block;
+    }
+
+    border: 10px solid #efefef;
+    border-right: none;
+    .mCSB_inside>.mCSB_container{  margin-right: 10px;}
+    .mCSB_dragger_bar{  width: 10px!important;  margin: 0 0px !important;  border-radius:0!important;  background: #ffbf00!important;  }
+    .mCSB_scrollTools{  width: 10px;  }
+    .mCSB_draggerRail{  background: #f0f0f0 !important;  }
+    .mCSB_scrollTools .mCSB_draggerRail{  border-radius: 0!important;  }
+    .mCustomScrollBox{  width: 100%;height: 100%;  }
+    .mCS-inset.mCSB_scrollTools .mCSB_draggerRail{ width: 10px !important; }
+    .logo{
+      top: 0px;
+      left: 0px;
+      width: 120px!important;
+      display: none;
+    }
+    .m-news-body{
+      width: 100%;
+      left: 0;
+      position: relative;
+      border-top: 3px solid #efefef;
+      z-index: 10;
+      .bd{
+        padding: 20px 20px 0 20px;
+      }
+    }
+
+    .myVideo-box{
+      display: none;
+      .hd{
+
+      }
+    }
+    .m-news-body dd{
+      padding-top: 0px;
+      font-size: 28px;
+    }
+    .m-news-body .item-box .content-dd p{
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .item-box{ width: 100% !important }
+
+    .icon{display: none}
+
+  }
+
+}

@@ -1,0 +1,50 @@
+<!-- container-list -->
+<div class="container-list">
+    <div  class="toggle-btn container-list-btn">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+    <!-- m-article-title -->
+    <div class="m-article-title">
+        <div class="title-bg">&nbsp;</div>
+        <img src="assets/images/logo.png" class="logo" >
+        <div class="content">
+            <div class="bd">
+                <ul class="bd-ul item-go" data-index="">
+                    <li class="item-hd" >CASE</li>
+                    <li class="item-bd"></li>
+                    <li class="item-ft" ></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)" class="more">
+                <img src="assets/images/more-btn.png">
+            </a>
+            <!-- move-btn -->
+            <div class="move-box">
+                <span id="moveSectionUp-btn">
+                &nbsp;
+                </span>
+                <span id="moveSectionDown-btn">
+                &nbsp;
+                </span>
+            </div>
+        </div>
+        <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+    </div>
+
+    <div id="fullpage" class="section-bg">
+        <!-- scene -->
+        <div class="section scene0{{$index+1}}" ng-repeat="case in HomeCtrl.caseList" on-last-repeat>
+            <div class="theme-frame">
+                <ul  class="frame-bg">
+                    <li class="layer layer-m" data-depth="0.10" >
+                        <img data-source="{{case.imgSource}}" width="100%"   class="data-img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- scene -->
+    </div>
+</div>
+<!-- end container-list -->

@@ -1,0 +1,120 @@
+/* about */
+.xxxx {
+  position: absolute;
+  background: #333333;
+}
+.m-about {
+  position: absolute;
+  background: #333333;
+  width: 100%;
+  height: 100%;
+  border: 20px solid #5a5a5a;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.8s;
+  -webkit-transform: translate3d(0%, 0px, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.m-about .logo {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
+.m-about.active {
+  z-index: 999;
+  -webkit-transform: translate3d(0%, 0px, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.about-address-map {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.about-address-map .allmap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.about-address-map .BMapLabel {
+  border: none !important;
+  font-size: 20px!important;
+  background: url("../images/address-b.png") no-repeat;
+  background-size: 100% !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+  width: 50px;
+  height: 50px;
+}
+.about-address-box {
+  width: 50%;
+  padding: 80px 80px 0 80px;
+}
+.about-address-box h2 {
+  color: #999999;
+  font-size: 10px;
+}
+.about-address-box .subtitle {
+  font-size: 18px;
+  padding-top: 40px;
+  color: #999;
+  padding-bottom: 30px;
+  line-height: 20px;
+}
+.about-address-box dl {
+  padding: 35px 0;
+}
+.about-address-box dl dt {
+  font-size: 60px;
+  color: #efefef;
+  padding-bottom: 40px;
+}
+.about-address-box dl dd p {
+  font-size: 18px;
+  padding-bottom: 8px;
+  color: #cccccc!important;
+}
+@media screen and (max-width: 1000px) {
+  .about-address-box {
+    padding: 40px 40px 0 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about {
+    height: 100%;
+    border: 10px solid #5a5a5a;
+    position: absolute;
+    top: 0px;
+  }
+  .about .logo {
+    width: 120px;
+    top: 10px;
+    left: 10px;
+    display: none;
+  }
+  .about-address-map {
+    width: 100% !important;
+    height: 30%;
+    display: none;
+  }
+  .about-address-box {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 0 20px;
+  }
+  .about-address-box dl {
+    padding: 10px 0;
+  }
+  .about-address-box .subtitle {
+    padding: 10px 0;
+  }
+  .about-address-box dt {
+    font-size: 22px !important;
+    padding-bottom: 20px!important;
+  }
+}
+.BMap_cpyCtrl {
+  display: none!important;
+}
+.anchorBL {
+  display: none!important;
+}
+/* end about */

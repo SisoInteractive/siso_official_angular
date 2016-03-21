@@ -1,0 +1,128 @@
+<!DOCTYPE html >
+<html ng-app="siso">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>思烁—专注于策划、商业美学设计和互联网内容的制造与传播</title>
+    <meta name="keyword" content="思烁、上海思烁、思烁广告、思烁品牌、siso、sisobrand、logo、UI、H5、网站、设计、开发、广告、策划、网站设计、网站开发、品牌包装">
+    <meta name="description" content="思烁品牌（sisobrand）是提供互联网、移动互联网传播策划、设计服务的专业机构。思烁的创意中心有着出色的策划设计能力和技术实施能力。有国内顶尖视觉设计师领衔的设计团队，主创成员均有4A背景、多年从事品牌战略与视觉设计，擅长完成企业品牌形象的提升。思烁品牌为腾讯、京东的年框签约服务商。同时为国内高端电竞平台、电子商务、服装、房地产等企业提供优质的品牌包装、互联网内容策划制作及互动传播等专业服务">
+    <!--<base href="siso_official_angular/dist/public/"/>-->
+    <!--<link rel="stylesheet" href="/siso_official_angular/dist/public/assets/stylesheets/main.min.css" />-->
+    <!-- injector:css -->
+    <link rel="stylesheet" href="assets/stylesheets/main.min.css" />
+    <!-- endinjector -->
+
+    <!--[if lt IE9]>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=h9pduEwXe3GSRE9kOlmWt3rW"></script>
+    <script src="assets/scripts/html5shiv.js"></script>
+    <![endif]-->
+    <script>
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        },true);
+    </script>
+    <!-- 监听移动设备 -->
+    <script src="common/os.js"></script>
+</head>
+<body>
+
+
+
+
+<!-- wrapper -->
+<div style="overflow: hidden;width: 100%;position: relative;height: 100%;" ng-controller="MainController as MainCtrl">
+    <!-- menu -->
+    <header class="header active">
+        <!-- loading box -->
+        <div class="loading-bod">&nbsp;</div>
+        <div class="theme-frame-border ">&nbsp;</div>
+        <div class="theme-frame-bg">&nbsp;</div>
+        <div  class="toggle-btn toggle">
+            <img src="assets/images/close.png" class="nav04" width="35px">
+        </div>
+        <!--video-->
+        <div class="nav-box not-in-mobile">
+            <video class="nav-box" id="header-video" loop="loop" resource="" webkit-playsinline="true" x-webkit-airplay="true" preload="none">
+                <source src="assets/video/navVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!--end video-->
+        <div class="theme-frame m-header ">
+            <div class="left-box-body">
+                <img src="assets/images/logo.png" class="logo">
+                <div class="content">
+                    <!-- nav -->
+                    <div class="m-nav">
+                        <div class="m-nav-hd fz10Regular">NAVIGATION</div>
+                        <div class="m-nav-bd">
+                            <ul>
+                                <li class="toggle-home" ui-sref="siso.home()"><a>HOME</a></li>
+                                <li class="toggle-company" ui-sref="siso.company()"><a >COMPANY</a></li>
+                                <li class="toggle-mostRecent" ui-sref="siso.mostRecent()" ><a>CASE STUDIES</a></li>
+                                <li class="toggle-services" ui-sref="siso.server()"><a >SERVICES</a></li>
+                                <li class="toggle-careers" ui-sref="siso.careers()"><a >CAREERS</a></li>
+                                <li>&nbsp;</li>
+                                <li class="toggle-news" ui-sref="siso.news()"><a >NEWS</a></li>
+                                <li class="toggle-about" ui-sref="siso.about()"><a >CONTACTS</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <p class="nav-text fz10Regular">Lorem ispum. Proin at eros non eros adipiscing mollis. Donec ipsum, porta nec, tempor id, auctor vitae, purus. Pellentesque neque. Nulla luctus erat vitae libero. Integer nec enim. Phasellus aliquam enim et tortor.</p>
+                </div>
+                <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+            </div>
+
+        </div>
+    </header>
+    <!-- end menu -->
+
+    <div class="main-views active" >
+        <!-- views -->
+        <section ui-view="main" style="height: 100%;"></section>
+        <!-- views -->
+
+    </div>
+
+    <div class="detail-project-views">
+        <div class="detail-bg">
+            <div ui-view="caseDetail" class="m-case-detail"></div>
+        </div>
+    </div>
+
+</div>
+<!-- wrapper -->
+
+
+
+<!-- less compiler -->
+
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="application.js"></script>
+<script src="common/models/project.model.js"></script>
+<script src="common/models/home.model.js"></script>
+<script src="home/home.js"></script>
+<script src="mostRecent/mostRecent.js"></script>
+<script src="caseDetail/caseDetail.js"></script>
+<script src="company/company.js"></script>
+<script src="news/news.js"></script>
+<script src="server/server.js"></script>
+<script src="careers/careers.js"></script>
+<script src="about/about.js"></script>
+
+
+
+<script src="http://libs.baidu.com/jquery/1.7.1/jquery.min.js"></script>
+<script src="assets/scripts/jquery.parallax.js" ></script>
+<script src="assets/scripts/jquery.fullPage.js" ></script>
+<script src="assets/scripts/hammer.min.js"></script>
+<script src="assets/scripts/jquery.hammer.js"></script>
+<script src="assets/scripts/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/scripts/jquery.bxslider.min.js"></script>
+<script src="common/index.js"></script>
+</body>
+
+</html>

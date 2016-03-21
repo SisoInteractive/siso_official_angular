@@ -1,0 +1,83 @@
+[
+
+  {
+    "name":"徐晓萍",
+    "title": "行政 / Administrative",
+    "img":"assets/images/people/xjp.jpg"
+  },
+  {
+    "name":"熊雅玲",
+    "title": "财政 / Finance",
+    "img":"assets/images/people/xyl.jpg"
+  },
+  {
+    "name":"李金贵",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/jg.jpg"
+  },
+  {
+    "name":"大卫",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/dwei.jpg"
+  },
+  {
+    "name":" 彭贺",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/ph.jpg"
+  },
+  {
+    "name":"洪建清",
+    "title": "FullStack Developer",
+    "img":"assets/images/people/hjq.jpg"
+  },
+  {
+    "name":"莫强龙",
+    "title": "FullStack Developer",
+    "img":"assets/images/people/sam.jpg"
+  },
+  {
+    "name":"张阳",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/zy.jpg"
+  },
+  {
+    "name":"刘英鸽",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/lyg.jpg"
+  },
+  {
+    "name":"刘聪",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/lc.jpg"
+  },
+  {
+    "name":"朱新江",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/zjx.jpg"
+  },
+  {
+    "name":"张海亮",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/hl.jpg"
+  },
+  {
+    "name":"楼俊远",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/ljy.jpg"
+  },
+  {
+    "name":"吴之涣",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/wzh.jpg"
+  },
+  {
+    "name":"吴唯佳",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/liang.jpg"
+  },
+  {
+    "name":"张李振",
+    "title": "设计 / Designer",
+    "img":"assets/images/people/zlz.jpg"
+  }
+]

@@ -1,0 +1,264 @@
+/*======================================================================
+      m-company
+  ======================================================================*/
+.m-careers {
+  position: absolute;
+  background: #efefef;
+  width: 100%;
+  height: 100%;
+  border: 20px solid #efefef;
+  border-right: none;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.8s;
+  -webkit-transform: translate3d(0%, 0px, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.m-careers.active {
+  z-index: 999;
+  -webkit-transform: translate3d(0%, 0px, 0);
+}
+.m-careers .m-careers-img {
+  padding: 30px 0 0 0;
+  display: none;
+}
+.m-careers .toggle-btn {
+  top: 20px;
+  right: 40px;
+}
+.m-careers .title-content {
+  font-size: 18px;
+  color: #666666;
+  padding: 40px 50px 40px 0;
+  font-weight: inherit;
+}
+.m-careers .mCSB_inside > .mCSB_container {
+  margin-right: 20px;
+}
+.m-careers .mCSB_dragger_bar {
+  width: 20px!important;
+  margin: 0 0px !important;
+  border-radius: 0!important;
+  background: #ffbf00!important;
+}
+.m-careers .mCSB_scrollTools {
+  width: 20px;
+}
+.m-careers .mCSB_draggerRail {
+  background: #f0f0f0 !important;
+}
+.m-careers .mCSB_scrollTools .mCSB_draggerRail {
+  border-radius: 0!important;
+}
+.m-careers .mCustomScrollBox {
+  width: 100%;
+  height: 100%;
+}
+.m-careers .mCS-inset.mCSB_scrollTools .mCSB_draggerRail {
+  width: 20px !important;
+}
+.m-careers .m-company-body {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+.m-careers .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  z-index: 99;
+}
+.m-careers .myVideo-box {
+  width: 100%;
+  height: 100%;
+}
+.m-careers .myVideo {
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-size: contain;
+  object-fit: cover;
+  /*cover video background */
+  z-index: 3;
+  display: block;
+  border: none;
+}
+.m-careers .m-news-body {
+  position: absolute;
+  top: 0;
+  background: #fff;
+  left: 50%;
+  height: 100%;
+  opacity: .95;
+}
+.m-careers .m-news-body h2 {
+  font-size: 10px;
+  color: #ccc;
+}
+.m-careers .m-news-body .bd {
+  padding: 80px 0 0 80px;
+}
+.m-careers .m-news-body .item-box {
+  width: 90%;
+}
+.m-careers .m-news-body .item-box dl {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.m-careers .m-news-body .item-box .content-dd {
+  display: none;
+}
+.m-careers .m-news-body .item-box .content-dd img {
+  padding: 10px 0;
+  width: 100%;
+}
+.m-careers .m-news-body .item-box .content-dd p {
+  padding: 5px 0;
+  font-size: 18px;
+  color: #888;
+}
+.m-careers .m-news-body dl {
+  padding-top: 37px;
+  padding-bottom: 33px;
+}
+.m-careers .m-news-body dt {
+  color: #999;
+}
+.m-careers .m-news-body dt {
+  color: #333333;
+  font-size: 36px;
+  cursor: pointer;
+  font-family: CasperBold;
+  padding-bottom: 20px;
+}
+.m-careers .m-news-body dd {
+  font-size: 18px;
+  color: #999;
+}
+.m-careers .icon {
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  -webkit-transition: all .8s;
+  -webkit-transform: rotate(0deg);
+}
+.m-careers .icon.active {
+  -webkit-transform: rotate(180deg);
+}
+.m-careers .icon.active:after {
+  opacity: 0;
+  -webkit-transition: all .8s;
+}
+.m-careers .icon-add:before,
+.m-careers .icon-add:after {
+  content: '';
+  height: 4px;
+  width: 22px;
+  display: block;
+  background: #999;
+  position: absolute;
+  top: 9px;
+  left: 0px;
+}
+.m-careers .icon-add:after {
+  height: 22px;
+  width: 4px;
+  top: 0;
+  left: 9px;
+  opacity: 1;
+}
+@media screen and (max-width: 1000px) {
+  .m-news-body dd {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .m-news-body dd {
+    font-size: 20px;
+  }
+  .m-news-body {
+    width: 100%;
+    left: 0;
+    position: relative;
+    border-top: 20px solid #efefef;
+    z-index: 10;
+  }
+  .m-news-body .bd {
+    padding: 40px 0 0 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .m-careers {
+    border: 10px solid #efefef;
+    border-right: none;
+  }
+  .m-careers .m-careers-img {
+    padding: 30px 0 0 0;
+    display: block;
+  }
+  .m-careers .mCSB_inside > .mCSB_container {
+    margin-right: 10px;
+  }
+  .m-careers .mCSB_dragger_bar {
+    width: 10px!important;
+    margin: 0 0px !important;
+    border-radius: 0!important;
+    background: #ffbf00!important;
+  }
+  .m-careers .mCSB_scrollTools {
+    width: 10px;
+  }
+  .m-careers .mCSB_draggerRail {
+    background: #f0f0f0 !important;
+  }
+  .m-careers .mCSB_scrollTools .mCSB_draggerRail {
+    border-radius: 0!important;
+  }
+  .m-careers .mCustomScrollBox {
+    width: 100%;
+    height: 100%;
+  }
+  .m-careers .mCS-inset.mCSB_scrollTools .mCSB_draggerRail {
+    width: 10px !important;
+  }
+  .m-careers .logo {
+    top: 0px;
+    left: 0px;
+    width: 120px!important;
+    display: none;
+  }
+  .m-careers .m-news-body {
+    width: 100%;
+    left: 0;
+    position: relative;
+    border-top: 3px solid #efefef;
+    z-index: 10;
+  }
+  .m-careers .m-news-body .bd {
+    padding: 20px 20px 0 20px;
+  }
+  .m-careers .myVideo-box {
+    display: none;
+  }
+  .m-careers .m-news-body dd {
+    padding-top: 0px;
+    font-size: 28px;
+  }
+  .m-careers .m-news-body .item-box .content-dd p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .m-careers .item-box {
+    width: 100% !important;
+  }
+  .m-careers .icon {
+    display: none;
+  }
+}

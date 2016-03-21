@@ -1,0 +1,72 @@
+[
+  [
+    {
+      "category" : "CASE STUDIES",
+      "title": "Tencent <br/>  Board Game Posters",
+      "content": "Tencent Board Game Championship tournament for different categories of items proposed project artistic qualities amplification requirements",
+      "img":"assets/images/mostRecent01.jpg",
+      "listType":"half",
+      "order":1
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "To introduce our",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat",
+      "img":"",
+      "listType":"half",
+      "order":""
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "DOIN'WEBSITE",
+      "content": "DOIN has a specific group of target audiences who are young , personalized , novelty.",
+      "img":"assets/images/mostRecent05.jpg",
+      "listType":"half",
+      "order":4
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "Oneplus <br/> websitebrand plate design",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat",
+      "img":"assets/images/most-qipai.jpg",
+      "listType":"half",
+      "order":6
+    }
+  ],
+
+  [
+    {
+      "category" : "CASE STUDIES",
+      "title": "JD.COM <br/> Double11",
+      "content": "Being the host for Double11, JD how to differentiate herself from others and at the same time injecting energy and fashionable vibe is our biggest challenge.",
+      "img":"assets/images/mostRecent02.jpg",
+      "listType":"half",
+      "order":2
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "JD.COM <br/>618",
+      "content": "June 18 (618) is a special day for JD, it is JD’s birthday party which is also an exclusive holiday for JD",
+      "img":"assets/images/mostRecent04.jpg",
+      "listType":"half",
+      "order":3
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "Redstar Sea <br/>World View",
+      "content": "Da Liang Redstar Sea is a high-end real estate project, thinking of selling this project at a different prospective, we came to face with the much challenges.",
+      "img":"assets/images/mostRecent06.jpg",
+      "listType":"half",
+      "order":5
+    },
+    {
+      "category" : "CASE STUDIES",
+      "title": "Oneplus <br/> websitebrand plate design",
+      "content":"Lorem ipsum dolor sit amet, consectetur adipiscing orcised cursus sem dignissim placerat",
+      "img":"assets/images/most-wugan.jpg",
+      "listType":"half",
+      "order":7
+    }
+
+  ]
+]
