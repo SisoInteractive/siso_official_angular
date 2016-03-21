@@ -12,7 +12,7 @@ angular.module('careers', [])
                 url:'/careers',
                 views:{
                     'main@': {
-                        controller: 'CareersController as CareersCtrl',
+                        controller: 'CareersController as CareerCtrl',
                         templateUrl: 'careers/careers.tmpl.html'
                     }
                 }
@@ -20,24 +20,27 @@ angular.module('careers', [])
 
 }])
 
-.controller('CareersController',['$scope','$http',function( $scope , $http ){
-
-        var CareersCtrl = this;
-        CareersCtrl.careersList = [];
+.controller('CareersController',['$scope','$http','Entry',function( $scope , $http, Entry ){
+        var CareerCtrl = this;
+        CareerCtrl.careersList = [];
 
         $scope.$on('$viewContentLoaded',function(){
-            $http.get('data/careers.json').then(function(result){
-                var careersList = result.data;
-                if(careersList){
-                    CareersCtrl.careersList = careersList;
-                }
-                $scope.$on('onRepeatLast', function(scope, element, attrs){
+            Entry.get('career').then(
+                function (res) {
+                    CareerCtrl.careerList = res.data.result;
+                }, function (res) {
+                    console.error(res);
                     init();
-                });
-            },function(){
+            });
+
+            $scope.$on('onRepeatLast', function(scope, element, attrs){
                 init();
             });
-        })
+
+            CareerCtrl.formatBody = function (body) {
+                return '<p>' + body.split('\n').join('</p><p>') + '</p>';
+            };
+        });
 
         function init(){
             console.log('join  careers');

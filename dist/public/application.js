@@ -22,7 +22,7 @@ angular.module('siso', [
         };
     })
 
-    .config([ '$stateProvider', '$urlRouterProvider', function( $stateProvider , $urlRouterProvider ) {
+    .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider', function( $stateProvider , $urlRouterProvider, $httpProvider ) {
         $stateProvider
             .state('siso', {
                 url:'',
@@ -40,4 +40,4 @@ angular.module('siso', [
         return function (text) {
             return $sce.trustAsHtml(text);
         };
-    }])
+    }]);

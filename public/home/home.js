@@ -108,7 +108,7 @@ angular.module('home', [
             function dataList(caseList){
                 if(caseList){
                     var dataIndex = caseList - 1;
-                    $( '.m-article-title' ).find( '.bd-ul' ).attr('data-index', dataIndex + 1);
+                    $( '.m-article-title' ).find( '.item-go' ).attr('data-index', dataIndex + 1);
                     $( '.m-article-title' ).find( '.item-bd' ).html( HomeCtrl.caseList[dataIndex].title );
                     $( '.m-article-title' ).find( '.item-ft' ).html( HomeCtrl.formatBody(HomeCtrl.caseList[dataIndex].body) );
                 }

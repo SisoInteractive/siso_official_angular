@@ -16,9 +16,10 @@
             <h2 class="title calculate-height">NEWS</h2>
             <div class="item-box">
                 <dl ng-repeat="newList in NewsCtrl.newList" on-last-repeat>
-                    <dt>{{newList.time}}</dt>
+                    <dt>{{newList.date}}</dt>
                     <dd class="hd">{{newList.title}}</dd>
-                    <dd class="content-dd" ng-bind-html=" newList.content | to_trusted "></dd>
+                    <dd class="content-dd" ng-bind-html="NewsCtrl.formatBody(newList.body) | to_trusted"></dd>
+                    <!--<dd class="content-dd" ng-bind-html="newList.body | to_trusted"></dd>-->
                 </dl>
             </div>
         </div>

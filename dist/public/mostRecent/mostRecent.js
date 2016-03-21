@@ -20,16 +20,23 @@ angular.module('mostRecent', [
             })
     }])
 
-    .controller('MostRecentController', ['$scope','$http','$state','Project',function ($scope, $http, $state, Project ) {
-
+    .controller('MostRecentController', ['$scope','$http','$state','Project','Entry',function ($scope, $http, $state, Project, Entry ) {
         var MostRecentCtrl = this;
-        MostRecentCtrl.leftCase = [];
-        MostRecentCtrl.rightCase = [];
-        $scope.caseRList = []
+        MostRecentCtrl.caseList = [];
         $scope.$on('$viewContentLoaded',function(){
-            Project.getProjectList().then(function (result) {
-                $scope.caseRList = result;
+            Entry.get('case').then(
+                function (res) {
+                    var date = res.data.result;
+
+                    MostRecentCtrl.caseList = [
+                        date.splice(date.length/2),
+                        date
+                    ];
+                }, function (res) {
+                    console.error(res);
+                    init();
             });
+
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
                 //
@@ -38,8 +45,6 @@ angular.module('mostRecent', [
             $('.m-mostRecent').addClass('active');
             $('.detail-bg').addClass('active');
         });
-
-
 
         function init(){
             /* jquery scroll for mostRecent */
@@ -88,4 +93,4 @@ angular.module('mostRecent', [
 
         }
 
-    }])
+    }]);

@@ -17,7 +17,7 @@
                     <li class="item-ft" ></li>
                 </ul>
             </div>
-            <a href="javascript:void(0)" class="more">
+            <a href="javascript:void(0)" class="more item-go" data-index="">
                 <img src="assets/images/more-btn.png">
             </a>
             <!-- move-btn -->
@@ -39,7 +39,8 @@
             <div class="theme-frame">
                 <ul  class="frame-bg">
                     <li class="layer layer-m" data-depth="0.10" >
-                        <img data-source="{{case.imgSource}}" width="100%"   class="data-img">
+                        <!--<img ng-src="{{HomeCtrl.isMobile ? case.homeThumbMobileSrc : case.homeThumbSrc}}" width="100%"   class="data-img">-->
+                        <img ng-src="http://192.168.0.23:4000/{{HomeCtrl.isMobile ? case.homeThumbMobileSrc : case.homeThumbSrc}}" width="100%"   class="data-img">
                     </li>
                 </ul>
             </div>

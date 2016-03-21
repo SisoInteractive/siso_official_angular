@@ -743,7 +743,19 @@
     -webkit-transition: all 1.2s;
     bottom: 6%;
     left: 0%;
+    img{
+      transition: all 0.3s;
+    }
   }
+
+  .more:hover{
+    img{
+      transform: rotate(-180deg);
+      -webkit-transform:rotate(-180deg);
+    }
+
+  }
+  
   min-width: 320px;
   z-index: 2;
   position: absolute;
@@ -893,7 +905,7 @@
         float: left;
         -webkit-transition: all .5s;
       }
-      .left {
+      .letf{
         width: 50%;
       }
       .right{
@@ -1358,7 +1370,7 @@
   }
 
   .m-mostRecent .mostRecent-body .ul{
-    .left,.right {
+    .letf,.right {
       width: 100%;
     }
     .quarter{
