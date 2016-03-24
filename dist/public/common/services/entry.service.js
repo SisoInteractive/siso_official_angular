@@ -4,7 +4,7 @@ angular.module('entry.service', [
 
     .factory('Entry', ['$http', '$q', function ($http, $q) {
         var URLS = {
-            FETCH: 'http://192.168.0.23:4000/api/v1/',
+            FETCH: 'http://120.26.48.94:4000/api/v1/',
             CONFIG: {
                 headers: {
                     'Authorization': 'Basic ' + window.btoa('sammok:a123456..')
