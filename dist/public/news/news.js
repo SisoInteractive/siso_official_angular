@@ -36,10 +36,6 @@ angular.module('news', [])
             });
         });
 
-        NewsCtrl.formatBody = function (body) {
-            return '<p>' + body.split('\n').join('</p><p>') + '</p>';
-        };
-
         function init(){
             console.log('join  news');
             $('.m-news').addClass('active');
