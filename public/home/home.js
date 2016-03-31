@@ -24,7 +24,6 @@ angular.module('home', [
             })
     }])
 
-
     .controller('HomeController', ['$scope','$http','$state','Home','Entry',function ($scope, $http, $state, Home, Entry) {
         //  show page
         var HomeCtrl = this;
@@ -34,7 +33,16 @@ angular.module('home', [
 
             Entry.get('case').then(
                 function (res) {
-                    HomeCtrl.caseList = res.data.result;
+                    var caseList = [];
+                    var resultList = res.data.result;
+                    for (var i = 0; i < resultList.length; i++) {
+                        if (resultList[i].pushHome == true) {
+                            caseList.push(resultList[i]);
+                        } else {
+                            break;
+                        }
+                    }
+                    HomeCtrl.caseList = caseList;
                 }, function (res) {
                     console.error(res);
                     init();

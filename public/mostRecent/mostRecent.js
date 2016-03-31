@@ -26,11 +26,11 @@ angular.module('mostRecent', [
         $scope.$on('$viewContentLoaded',function(){
             Entry.get('case').then(
                 function (res) {
-                    var date = res.data.result;
+                    var data = res.data.result;
 
                     MostRecentCtrl.caseList = [
-                        date.splice(date.length/2),
-                        date
+                        data.splice(data.length/2),
+                        data
                     ];
                 }, function (res) {
                     console.error(res);
@@ -65,7 +65,6 @@ angular.module('mostRecent', [
                 var mostRecent_li = $(".item-box .item");
                 mostRecent_li.each(function(item,self){
                     var mostRecent_li_width_value = $(self).width();
-                    console.log(mostRecent_li_width_value)
                     $(self).css('height',mostRecent_li_width_value+"px");
                 });
             }

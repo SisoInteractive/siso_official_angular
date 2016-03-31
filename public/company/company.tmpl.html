@@ -64,9 +64,9 @@
                 <ul>
                     <h2 style="    padding: 130px 130px 100px 130px;">Team Members/ Name/ Position</h2>
                     <li class="li " ng-repeat="hotospImg in CompanylCtrl.hotospImgs">
-                        <img ng-src="{{hotospImg.img}}" width="100%" alt=""/>
+                        <img ng-src="{{URLS.BASE + hotospImg.photoSrc}}" width="100%" alt=""/>
                         <p class="hd">{{ hotospImg.name }}</p>
-                        <p class="bd">{{ hotospImg.title }}</p>
+                        <p class="bd">{{ hotospImg.position + '&nbsp;/&nbsp;' + hotospImg.positionEnglish }}</p>
                     </li>
                 </ul>
             </div>

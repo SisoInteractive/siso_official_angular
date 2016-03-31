@@ -32,8 +32,9 @@ angular.module('siso', [
 
     }])
 
-    .controller( 'MainController' , [function(  ) {
+    .controller( 'MainController' , ['$scope', function($scope) {
         var MainCtrl = this;
+        $scope.URLS = URLS;
     }])
 
     .filter('to_trusted',['$sce',function($sce){
