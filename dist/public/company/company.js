@@ -20,30 +20,19 @@ angular.module('company', [])
 
 }])
 
-.controller('CompanyController',['$scope','$http',function( $scope , $http ){
+.controller('CompanyController',['$scope','$http', 'Entry', function( $scope , $http, Entry ){
 
         var CompanylCtrl = this;
         CompanylCtrl.hotospImgs = [];
-        //if( localStorage.getItem('CompanylCtrl.hotospImgs') ){
-        //    CompanylCtrl.hotospImgs = JSON.parse( localStorage.getItem('CompanylCtrl.hotospImgs'));
-        //    $scope.$on('$viewContentLoaded', function () {
-        //        init();
-        //    });
-        //}else {
-            $scope.$on('$viewContentLoaded', function () {
-                $http.get("data/company.json").then(function (result) {
-                    var hotospImgs = result.data;
-                    if (hotospImgs) {
-                        CompanylCtrl.hotospImgs = hotospImgs;
-                        localStorage.setItem("CompanylCtrl.hotospImgs", JSON.stringify(hotospImgs));
-                    }
-                    init();
-                }, function (error) {
-                    init();
-                });
-            });
-        //};
 
+        Entry.get('photo').then(
+            function (res) {
+                CompanylCtrl.hotospImgs = res.data.result;
+                init();
+            }, function (res) {
+                console.error(res);
+                init();
+            });
 
         function init(){
             console.log('join company');
