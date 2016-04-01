@@ -27,11 +27,9 @@ angular.module('mostRecent', [
             Entry.get('case').then(
                 function (res) {
                     var data = res.data.result;
-
-                    MostRecentCtrl.caseList = [
-                        data.splice(data.length/2),
-                        data
-                    ];
+                    var arr = [ data.splice(data.length/2) ];
+                    arr.unshift(data);
+                    MostRecentCtrl.caseList = arr;
                 }, function (res) {
                     console.error(res);
                     init();
