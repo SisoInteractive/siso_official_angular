@@ -4,7 +4,7 @@
 //#  set ENV variable
 
 var ENV_ARR = ['development', 'production'];
-var ENV = ENV_ARR[0];  //#  0 or 1
+var ENV = ENV_ARR[1];  //#  0 or 1
 
 //#  default config is for development environment
 var URLS = {

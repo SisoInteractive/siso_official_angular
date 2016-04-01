@@ -43,6 +43,7 @@ angular.module('home', [
                         }
                     }
                     HomeCtrl.caseList = caseList;
+                    init();
                 }, function (res) {
                     console.error(res);
                     init();

@@ -57,6 +57,7 @@ angular.module('careers', [])
             var item_box_bd = $('.item-box .hd');
             item_box_bd.hammer().bind('tap',function(){
                 $(this).siblings(".content-dd").slideToggle();
+                $(this).parents('.careerList').siblings('.careerList').find('.content-dd').slideUp();
                 var icon = $(this).siblings('.icon-add');
                 icon.toggleClass("active");
                 var dl = $(this).parent();

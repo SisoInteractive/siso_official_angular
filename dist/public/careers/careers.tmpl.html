@@ -17,7 +17,7 @@
             <p class="calculate-height"><img src="assets/images/careers-bg.jpg" class="m-careers-img" alt="" width="100%"/></p>
             <p class="title-content calculate-height">We believe in a balanced environment, where positivity, hard work and happy hours coexist. While much of our time is spent at our desks or in meetings, we've created a culture that makes the outside world an integral part of our daily working routines.</p>
             <div class="item-box">
-                <dl ng-repeat="career in CareerCtrl.careerList" on-last-repeat>
+                <dl ng-repeat="career in CareerCtrl.careerList" on-last-repeat class="careerList">
                     <dt class="hd">{{career.title}}</dt>
                     <dd class="content-dd" ng-bind-html=" CareerCtrl.formatBody(career.body) | to_trusted "></dd>
                 </dl>

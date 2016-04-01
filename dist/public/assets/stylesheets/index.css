@@ -863,7 +863,7 @@
 .m-mostRecent .mostRecent-body .ul .item ul {
   position: absolute;
   top: 37%;
-  margin-left: 50px;
+  margin: 0 50px;
   opacity: 0;
   transition: all .6s;
   -webkit-transition: all .6s;
