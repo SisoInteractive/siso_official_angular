@@ -61,7 +61,15 @@ angular.module('home', [
         function init(){
             console.log('进入 main!');
             /* Data initialization */
+            var title_bg = $('.title-bg');
+            var more_span = $('.more');
+            var move_box_span = $('.move-box span');
+            var nextItem = HomeCtrl.caseList[0];
+            title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
+            more_span.css({'background':'#' + nextItem.homeBtnColor});
+
             dataList(1);
+
             $('.container-list').addClass('active');
             //parallax
             $('.frame-bg').parallax({});
@@ -74,43 +82,10 @@ angular.module('home', [
                 easingcss3: 'cubic-bezier(0.785, 0.135, 0.150, 0.860)',
                 //This callback is fired once the user leaves a section
                 onLeave: function(index, nextIndex, direction){
-                    var title_bg = $('.title-bg');
-                    var more_span = $('.more');
-                    var move_box_span = $('.move-box span');
                     dataList(nextIndex);
-                    switch ( nextIndex ){
-                        case 1:
-                            title_bg.css({'background':'#1c6b38', 'opacity':'0.95'});
-                            more_span.css({'background':'#1c6b38'});
-                            move_box_span.removeClass();
-                            move_box_span.addClass('green');
-                            break;
-                        case 2:
-                            title_bg.css({'background':'#b61d22', 'opacity':'0.95'});
-                            more_span.css({'background':'#d8282e'});
-                            move_box_span.removeClass();
-                            move_box_span.addClass('red');
-                            break;
-                        case 3:
-                            title_bg.css({'background':'#a54c0c', 'opacity':'0.95'});
-                            more_span.css({'background':'#c2621e'});
-                            move_box_span.removeClass();
-                            move_box_span.addClass('brown');
-                            break;
-                        case 4:
-                            title_bg.css({'background':'#e49e4b', 'opacity':'0.95'});
-                            more_span.css({'background':'#FFAE4E'});
-                            move_box_span.removeClass();
-                            move_box_span.addClass('brown');
-                            break;
-                        case 5:
-                            title_bg.css({'background':'#949494', 'opacity':'0.95'});
-                            more_span.css({'background':'#919191'});
-                            move_box_span.removeClass();
-                            move_box_span.addClass('gray');
-                            break;
-                    }
-
+                    var nextItem = HomeCtrl.caseList[nextIndex-1];
+                    title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
+                    more_span.css({'background':'#' + nextItem.homeBtnColor});
                 }
             });
 
@@ -151,3 +126,16 @@ angular.module('home', [
         }
 
     }]);
+
+
+var myApp = angular.module('myApp',[]);
+myApp.controller('ShowController', function ($scope) {
+    $scope.shows = [
+        {title: '幸福来敲门', subscribe: true},
+        {title: '逆世界',subscribe: false},
+        {title: '机器人总动员', subscribe: true},
+        {title: '闻香识女人', subscribe: true},
+        {title: '时间规划局', subscribe: false},
+
+    ];
+});
