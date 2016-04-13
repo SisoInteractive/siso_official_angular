@@ -23,5 +23,6 @@ angular.module('entry.service', [
         return {
             get: getEntry
         }
-    }]);
 
+        
+    }]);
