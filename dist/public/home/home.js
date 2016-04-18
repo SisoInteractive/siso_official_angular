@@ -63,6 +63,7 @@ angular.module('home', [
             /* Data initialization */
             var title_bg = $('.title-bg');
             var more_span = $('.more');
+            var item_go = $('.item-go');
             var move_box_span = $('.move-box span');
             var nextItem = HomeCtrl.caseList[0];
             title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
@@ -92,7 +93,7 @@ angular.module('home', [
             function dataList(caseList){
                 if(caseList){
                     var dataIndex = caseList - 1;
-                    $( '.m-article-title' ).find( '.item-go' ).attr('data-index', dataIndex + 1);
+                    $( '.m-article-title' ).find( '.item-go' ).attr('data-index',HomeCtrl.caseList[dataIndex].order);
                     $( '.m-article-title' ).find( '.item-bd' ).html( HomeCtrl.caseList[dataIndex].title );
                     $( '.m-article-title' ).find( '.item-ft' ).html( HomeCtrl.formatBody(HomeCtrl.caseList[dataIndex].body) );
                 }
