@@ -42,8 +42,15 @@ angular.module('home', [
                             break;
                         }
                     }
+
+                    function rearrangement(a,b){
+                        return a.order - b.order;
+                    }
+                    caseList.sort(rearrangement);
+
                     HomeCtrl.caseList = caseList;
                     init();
+
                 }, function (res) {
                     console.error(res);
                     init();
@@ -76,11 +83,8 @@ angular.module('home', [
             $('.frame-bg').parallax({});
             //fullPage.js
             $('#fullpage').fullpage({
-                css3: true,
-                scrollingSpeed:800,
                 continuousVertical: true,
                 easing: 'easeInOutCubic',
-                easingcss3: 'cubic-bezier(0.785, 0.135, 0.150, 0.860)',
                 //This callback is fired once the user leaves a section
                 onLeave: function(index, nextIndex, direction){
                     dataList(nextIndex);

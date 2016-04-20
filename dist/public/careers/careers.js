@@ -73,7 +73,7 @@ angular.module('careers', [])
                 setTimeout(function(){
                     $('.m-news-body').mCustomScrollbar("scrollTo",goto_height)
                 },410)
-            })
+            });
 
             function getItem_height(item_box,dl_index){
                 var sum_height= 0;
@@ -85,13 +85,13 @@ angular.module('careers', [])
                 return sum_height;
             }
 
-            $('.m-careers-nav').hammer().bind('tap',function(){
-                index.heardVideo.play();//导航视频播放
-                $('.header,.main-views').removeClass('active');
-            });
-
-
 
         }
+
+        $('.m-careers-nav').hammer().bind('tap',function(){
+            index.heardVideo.play();//导航视频播放
+            $('.header,.main-views').removeClass('active');
+        });
+
 
     }])

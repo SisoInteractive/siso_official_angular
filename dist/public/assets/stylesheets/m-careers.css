@@ -121,6 +121,9 @@
   font-size: 18px;
   color: #888;
 }
+.m-careers .m-news-body .item-box .content-dd p span {
+  font-family: "微软雅黑" !important;
+}
 .m-careers .m-news-body dl {
   padding-top: 37px;
   padding-bottom: 33px;
@@ -132,7 +135,7 @@
   color: #333333;
   font-size: 36px;
   cursor: pointer;
-  font-family: CasperBold;
+  font-family: "微软雅黑";
   padding-bottom: 20px;
 }
 .m-careers .m-news-body dd {

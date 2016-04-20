@@ -11,12 +11,9 @@
         <ul class="ul frame-bg" id="mostRecent-wrapper" >
             <li class="left item-box">
                 <ul>
-                    <li class="item half item-go" data-index="{{leftCase.order}}" ng-class="$index==1?'show':''" ng-repeat="leftCase in MostRecentCtrl.caseList[0]" on-last-repeat>
-                        <!--<div class="item-img"><img ng-src="{{leftCase.caseStudiesThumbSrc}}" width="100%"></div>-->
+                    <li class="item half item-go" data-index="{{leftCase.order}}"  ng-repeat="leftCase in MostRecentCtrl.caseList[0]" on-last-repeat>
                         <div class="item-img"><img ng-src="{{URLS.BASE + leftCase.caseStudiesThumbSrc}}" width="100%"></div>
-                        <div class="item-img" ng-if="$index == 1" style="background: #ffcc00">&nbsp;</div>
                         <div class="bg"></div>
-                        <!--<ul ng-if="leftCase.listType == 'half'">-->
                         <ul>
                             <li class="item-hd ">{{leftCase.type}}</li>
                             <li class="item-bd" ng-bind-html="leftCase.title | to_trusted"></li>
@@ -28,7 +25,6 @@
             <li class="right item-box">
                 <ul>
                     <li class="item half item-go" data-index="{{rightCase.order}}" ng-repeat="rightCase in MostRecentCtrl.caseList[1]" on-last-repeat>
-                        <!--<div class="item-img"><img ng-src="{{rightCase.caseStudiesThumbSrc}}" width="100%"></div>-->
                         <div class="item-img"><img ng-src="{{URLS.BASE + rightCase.caseStudiesThumbSrc}}" width="100%"></div>
                         <div class="bg"></div>
                         <!--<ul ng-if="rightCase.listType == 'half'">-->
