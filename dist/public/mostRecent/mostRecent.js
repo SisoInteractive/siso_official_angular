@@ -27,9 +27,20 @@ angular.module('mostRecent', [
             Entry.get('case').then(
                 function (res) {
                     var data = res.data.result;
-                    var arr = [ data.splice(data.length/2) ];
-                    arr.unshift(data);
-                    MostRecentCtrl.caseList = arr;
+                    var dataOdd = [];
+                    var dataEven= [];
+
+                    for( var i = 0; i<data.length; i++ ){
+                        if( i%2 == 0 ){
+                            dataOdd.push(data[i]);
+                        }else{
+                            dataEven.push(data[i]);
+                        }
+                    }
+
+                    MostRecentCtrl.caseList = [dataOdd,dataEven];
+                    console.log(MostRecentCtrl.caseList)
+
                 }, function (res) {
                     console.error(res);
                     init();

@@ -107,6 +107,10 @@
   font-size: 18px;
   color: #999;
   padding-bottom: 40px;
+  font-family: "微软雅黑" !important;
+}
+.m-news .m-news-body .item-box .content-dd p span {
+  font-family: "微软雅黑" !important;
 }
 .m-news .m-news-body dl {
   padding-top: 40px;
@@ -120,7 +124,7 @@
   color: #333;
   font-size: 36px;
   cursor: pointer;
-  font-family: CasperBold;
+  font-family: "微软雅黑" !important;
 }
 .m-news .icon {
   height: 20px;

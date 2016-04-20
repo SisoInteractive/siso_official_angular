@@ -78,13 +78,15 @@ angular.module('news', [])
                 return sum_height;
             }
 
-            $('.m-news-nav').hammer().bind('tap',function(){
-                index.heardVideo.play();//导航视频播放
-                $('.header,.main-views').removeClass('active');
-            });
+
 
 
 
         }
+
+        $('.m-news-nav').hammer().bind('tap',function(){
+            index.heardVideo.play();//导航视频播放
+            $('.header,.main-views').removeClass('active');
+        });
 
     }])
