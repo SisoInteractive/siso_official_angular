@@ -3,6 +3,7 @@
 var index = {
     window_width:0,// this is window width
     window_height:0,
+    initNumber:0,//控制网站加载几次
     heardVideo:document.getElementById("header-video"),
     app: function(){
         index.operate_dom();
@@ -15,6 +16,7 @@ var index = {
         index.header = $('.header');
         //toggle
         function addActive( route , locationHash ){
+            $.fn.fullpage.destroy('all'); // destroy home-component plugin event
             if( locationHash.indexOf( route ) < 0 ) {
                 $('.loading-bod').addClass('active');
                 setTimeout(function(){
