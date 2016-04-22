@@ -58,12 +58,17 @@ angular.module('company', [])
                 video.get(0).play();
                 $(this).fadeOut();
                 $(this).siblings('.myVideo_zz').fadeOut();
-            })
+            });
+
             $('.myVideo').hammer().bind("tap",function(){
                 $(this).get(0).pause();
                 var myVideo_box = $(this).parent();
                 myVideo_box.children('.myVideo_zz').fadeIn();
                 myVideo_box.children('.playVideo-btn').fadeIn();
+            });
+
+            $('.next').hammer().bind("tap",function(){
+
             })
         }
 

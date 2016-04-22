@@ -46,11 +46,9 @@ angular.module('home', [
                     function rearrangement(a,b){
                         return a.order - b.order;
                     }
+
                     caseList.sort(rearrangement);
-
                     HomeCtrl.caseList = caseList;
-                    init();
-
                 }, function (res) {
                     console.error(res);
                     init();
@@ -58,6 +56,7 @@ angular.module('home', [
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
                 //
+
                 init();
             });
 
@@ -66,12 +65,11 @@ angular.module('home', [
             };
         });
         function init(){
-            console.log('进入 main!');
+            index.initNumber++;
+            console.log('进入 main!' + index.initNumber );
             /* Data initialization */
             var title_bg = $('.title-bg');
             var more_span = $('.more');
-            var item_go = $('.item-go');
-            var move_box_span = $('.move-box span');
             var nextItem = HomeCtrl.caseList[0];
             title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
             more_span.css({'background':'#' + nextItem.homeBtnColor});
@@ -81,18 +79,19 @@ angular.module('home', [
             $('.container-list').addClass('active');
             //parallax
             $('.frame-bg').parallax({});
+
             //fullPage.js
-            $('#fullpage').fullpage({
-                continuousVertical: true,
-                easing: 'easeInOutCubic',
-                //This callback is fired once the user leaves a section
-                onLeave: function(index, nextIndex, direction){
-                    dataList(nextIndex);
-                    var nextItem = HomeCtrl.caseList[nextIndex-1];
-                    title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
-                    more_span.css({'background':'#' + nextItem.homeBtnColor});
-                }
-            });
+                $('#fullpage').fullpage({
+                    easing: 'easeInOutCubic',
+                    //This callback is fired once the user leaves a section
+                    onLeave: function(index, nextIndex, direction){
+                        dataList(nextIndex);
+                        var nextItem = HomeCtrl.caseList[nextIndex-1];
+                        title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
+                        more_span.css({'background':'#' + nextItem.homeBtnColor});
+                    }
+                });
+
 
             function dataList(caseList){
                 if(caseList){
