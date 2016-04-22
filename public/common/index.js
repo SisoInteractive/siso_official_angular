@@ -16,7 +16,6 @@ var index = {
         index.header = $('.header');
         //toggle
         function addActive( route , locationHash ){
-            $.fn.fullpage.destroy('all'); // destroy home-component plugin event
             if( locationHash.indexOf( route ) < 0 ) {
                 $('.loading-bod').addClass('active');
                 setTimeout(function(){

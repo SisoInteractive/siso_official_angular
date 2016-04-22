@@ -22,6 +22,7 @@ angular.module('mostRecent', [
 
     .controller('MostRecentController', ['$scope','$http','$state','Project','Entry',function ($scope, $http, $state, Project, Entry ) {
         var MostRecentCtrl = this;
+        var initNub = 0;
         MostRecentCtrl.caseList = [];
         $scope.$on('$viewContentLoaded',function(){
             Entry.get('case').then(
@@ -38,8 +39,7 @@ angular.module('mostRecent', [
                         }
                     }
 
-                    MostRecentCtrl.caseList = [dataOdd,dataEven];
-                    console.log(MostRecentCtrl.caseList)
+                    MostRecentCtrl.caseList = [dataEven,dataOdd];
 
                 }, function (res) {
                     console.error(res);
@@ -48,11 +48,27 @@ angular.module('mostRecent', [
 
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
-                //
+                initNub++
+                if(initNub==1){
+                    var mostRecentLi = $('.mostRecent-body .left .item:eq(0)');
+                    var mostRecentTmpl = $("<li class='item half item-go show' id='RecruitmentBox'>"
+                                        +"<div class='item-img'><img  width='100%'></div>"
+                                        +"<div class='item-img' style='background: #ffcc00'>&nbsp;</div>"
+                                        +"<div class='bg'></div>"
+                                            +"<ul>"
+                                                +"<li class='item-hd'>招聘信息</li>"
+                                                +"<li class='item-bd'>...</li>"
+                                                +"<li class='item-ft'>..</li>"
+                                            +"</ul>"
+                                        +"</li>")
+                    mostRecentTmpl.insertAfter(mostRecentLi);
+                }
                 init();
             });
+
             $('.m-mostRecent').addClass('active');
             $('.detail-bg').addClass('active');
+
         });
 
         function init(){

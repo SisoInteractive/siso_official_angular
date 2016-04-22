@@ -13,6 +13,7 @@
                 <ul>
                     <li class="item half item-go" data-index="{{leftCase.order}}"  ng-repeat="leftCase in MostRecentCtrl.caseList[0]" on-last-repeat>
                         <div class="item-img"><img ng-src="{{URLS.BASE + leftCase.caseStudiesThumbSrc}}" width="100%"></div>
+                        <!--<div class="item-img" style="background: #ffcc00">&nbsp;</div>-->
                         <div class="bg"></div>
                         <ul>
                             <li class="item-hd ">{{leftCase.type}}</li>
@@ -27,7 +28,6 @@
                     <li class="item half item-go" data-index="{{rightCase.order}}" ng-repeat="rightCase in MostRecentCtrl.caseList[1]" on-last-repeat>
                         <div class="item-img"><img ng-src="{{URLS.BASE + rightCase.caseStudiesThumbSrc}}" width="100%"></div>
                         <div class="bg"></div>
-                        <!--<ul ng-if="rightCase.listType == 'half'">-->
                         <ul>
                             <li class="item-hd ">{{rightCase.type}}</li>
                             <li class="item-bd" ng-bind-html="rightCase.title | to_trusted"></li>

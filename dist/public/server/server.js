@@ -23,8 +23,8 @@ angular.module('server',[])
         function init(){
             var news_body = $('.m-server');
             news_body.mCustomScrollbar({
-                autoHideScrollbar:false,
                 theme:"inset",
+                autoHideScrollbar:true,
                 scrollEasing:"easeOut",
                 scrollInertia:400,
                 contentTouchScroll:30

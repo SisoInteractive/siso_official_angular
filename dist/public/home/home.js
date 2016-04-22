@@ -81,6 +81,8 @@ angular.module('home', [
             $('.frame-bg').parallax({});
 
             //fullPage.js
+            if(typeof $.fn.fullpage.destroy === 'undefined'){
+                console.log(typeof $.fn.fullpage.destroy)
                 $('#fullpage').fullpage({
                     easing: 'easeInOutCubic',
                     //This callback is fired once the user leaves a section
@@ -91,6 +93,20 @@ angular.module('home', [
                         more_span.css({'background':'#' + nextItem.homeBtnColor});
                     }
                 });
+            }else{
+                $.fn.fullpage.destroy("all");
+                $('#fullpage').fullpage({
+                    easing: 'easeInOutCubic',
+                    //This callback is fired once the user leaves a section
+                    onLeave: function(index, nextIndex, direction){
+                        dataList(nextIndex);
+                        var nextItem = HomeCtrl.caseList[nextIndex-1];
+                        title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
+                        more_span.css({'background':'#' + nextItem.homeBtnColor});
+                    }
+                });
+            } // destroy home-component plugin event
+
 
 
             function dataList(caseList){
