@@ -66,7 +66,7 @@ angular.module('home', [
         });
         function init(){
             index.initNumber++;
-            console.log('进入 main!' + index.initNumber );
+            console.log('进入 main1!' + index.initNumber );
             /* Data initialization */
             var title_bg = $('.title-bg');
             var more_span = $('.more');
@@ -84,6 +84,7 @@ angular.module('home', [
             if(typeof $.fn.fullpage.destroy === 'undefined'){
                 console.log(typeof $.fn.fullpage.destroy)
                 $('#fullpage').fullpage({
+                    continuousVertical: true,
                     easing: 'easeInOutCubic',
                     //This callback is fired once the user leaves a section
                     onLeave: function(index, nextIndex, direction){

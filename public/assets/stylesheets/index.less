@@ -500,12 +500,27 @@
       li{
         -webkit-box-flex:1.0; /* Safari and Chrome */
         box-flex:1.0;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transition: all .6s;
+        -webkit-transition: all .6s;
         img{
           display: block;
+          transition: all .6s;
+          -webkit-transition: all .6s;
         }
+
       }
       li:hover{
         cursor:pointer;
+        img{
+          -webkit-transform: scale(1.1);
+        }
       }
     }
   }

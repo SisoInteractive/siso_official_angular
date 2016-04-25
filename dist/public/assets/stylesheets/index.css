@@ -449,12 +449,26 @@
   -webkit-box-flex: 1.0;
   /* Safari and Chrome */
   box-flex: 1.0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all .6s;
+  -webkit-transition: all .6s;
 }
 .m-case-detail .detail-description-five .bd li img {
   display: block;
+  transition: all .6s;
+  -webkit-transition: all .6s;
 }
 .m-case-detail .detail-description-five .bd li:hover {
   cursor: pointer;
+}
+.m-case-detail .detail-description-five .bd li:hover img {
+  -webkit-transform: scale(1.1);
 }
 .m-case-detail .detail-description-three {
   background: #fff;

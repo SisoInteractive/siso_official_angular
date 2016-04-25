@@ -187,6 +187,11 @@ angular.module('caseDetail', [])
                 $('.header').removeClass('active');
             });
 
+            $('.detail-description-five li').hammer().bind('tap',function(){
+                index.toggle_detail_wrapper.setIndex($(this).attr('data-index'));
+                togglePage.Page()
+            });
+
         }
 
 
