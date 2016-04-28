@@ -39,6 +39,7 @@ angular.module('news', [])
         function init(){
             console.log('join  news');
             $('.m-news').addClass('active');
+
             var news_body = $('.m-news-body');
             news_body.mCustomScrollbar({
                 autoHideScrollbar:false,
@@ -60,10 +61,12 @@ angular.module('news', [])
                 var item_box = $(this).parents('.item-box');
                 var dl_index = dl.index();
                 var calculate_height = 0;
+
                 db.children('.calculate-height').each(function(){
                     calculate_height = calculate_height + $(this).outerHeight(true);
                 });
                 var goto_height = getItem_height(item_box,dl_index) + db_top + calculate_height;
+
                 setTimeout(function(){
                     $('.m-news-body').mCustomScrollbar("scrollTo",goto_height)
                 },410)
@@ -72,17 +75,12 @@ angular.module('news', [])
             function getItem_height(item_box,dl_index){
                 var sum_height= 0;
                 item_box.children('dl:lt('+ dl_index +')').each(function(){
-
                     sum_height = sum_height + $(this).outerHeight(true);
                 });
                 return sum_height;
             }
 
-
-
-
-
-        }
+        };
 
         $('.m-news-nav').hammer().bind('tap',function(){
             index.heardVideo.play();//导航视频播放

@@ -74,7 +74,7 @@ angular.module('home', [
             title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
             more_span.css({'background':'#' + nextItem.homeBtnColor});
 
-            dataList(1);
+            dataList(1);// init data
 
             $('.container-list').addClass('active');
             //parallax
@@ -108,8 +108,6 @@ angular.module('home', [
                 });
             } // destroy home-component plugin event
 
-
-
             function dataList(caseList){
                 if(caseList){
                     var dataIndex = caseList - 1;
@@ -124,6 +122,7 @@ angular.module('home', [
             $('#moveSectionUp-btn').hammer().bind("tap",function(){
                 $('#fullpage').fullpage.moveSectionUp();
             });
+
             //click moveSectionDown-btn
             $('#moveSectionDown-btn').hammer().bind("tap",function(){
                 $('#fullpage').fullpage.moveSectionDown();
@@ -133,7 +132,6 @@ angular.module('home', [
                 index.heardVideo.play();//导航视频播放
                 $('.header,.main-views').removeClass('active');
             });
-
 
             // TODO
             $('.item-go').hammer().bind("tap",function(){
@@ -157,6 +155,5 @@ myApp.controller('ShowController', function ($scope) {
         {title: '机器人总动员', subscribe: true},
         {title: '闻香识女人', subscribe: true},
         {title: '时间规划局', subscribe: false},
-
     ];
 });

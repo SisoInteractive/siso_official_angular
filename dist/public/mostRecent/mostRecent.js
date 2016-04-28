@@ -51,14 +51,14 @@ angular.module('mostRecent', [
                 initNub++
                 if(initNub==1){
                     var mostRecentLi = $('.mostRecent-body .left .item:eq(0)');
-                    var mostRecentTmpl = $("<li class='item half item-go show' id='RecruitmentBox'>"
+                    var mostRecentTmpl = $("<li class='item half show' id='RecruitmentBox'>"
                                         +"<div class='item-img'><img  width='100%'></div>"
                                         +"<div class='item-img' style='background: #ffcc00'>&nbsp;</div>"
                                         +"<div class='bg'></div>"
                                             +"<ul>"
                                                 +"<li class='item-hd'>招聘信息</li>"
-                                                +"<li class='item-bd'>...</li>"
-                                                +"<li class='item-ft'>..</li>"
+                                                +"<li class='item-bd'>H5前端web移动开发</li>"
+                                                +"<li class='item-ft'>公司项目70%为移动端H5开发,30%PC端页面，如有github, 请附带进简历, 我们会去阅读你的代码。</li>"
                                             +"</ul>"
                                         +"</li>")
                     mostRecentTmpl.insertAfter(mostRecentLi);
@@ -68,7 +68,6 @@ angular.module('mostRecent', [
 
             $('.m-mostRecent').addClass('active');
             $('.detail-bg').addClass('active');
-
         });
 
         function init(){
@@ -106,7 +105,7 @@ angular.module('mostRecent', [
                 $('.header,.main-views').removeClass('active');
             });
 
-            // TODO
+            // component toggle
             $('.item-go').hammer().bind("tap",function(){
                 $('.detail-project-views').addClass('active');
                 $('.detail-bg').addClass('active');
@@ -115,6 +114,16 @@ angular.module('mostRecent', [
                     $state.go('siso.caseDetail', {index:dataIndex});
                 },1200);
             });
+
+            //招聘module toggle
+            $("#RecruitmentBox").hammer().bind("tap",function(){
+                $(".main-views").fadeOut("300");
+                setTimeout(function(){
+                    $(".main-views").fadeIn();
+                    $state.go('siso.careers');
+                },300);
+
+            })
 
         }
 

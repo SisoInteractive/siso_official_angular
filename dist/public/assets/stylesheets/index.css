@@ -1215,6 +1215,7 @@
     width: 100% !important;
   }
   .detail-project-views {
+    -webkit-transition: all 300s;
     border: 10px solid #f0f0f0!important;
   }
   .mostRecent-body .mCSB_inside > .mCSB_container {

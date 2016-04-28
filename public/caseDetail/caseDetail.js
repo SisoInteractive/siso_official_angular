@@ -162,9 +162,10 @@ angular.module('caseDetail', [])
                     index.toggle_detail_wrapper.setIndex(1);
                 }
             };
+
             togglePage.Page = function(){
                 setTimeout(function(){
-                    location.hash = "#/caseDetail?index="+ index.toggle_detail_wrapper.index +""
+                    location.hash = "#/caseDetail?index="+ index.toggle_detail_wrapper.index +"";
                 },800)
             }
             togglePage.Url( $location );
@@ -188,8 +189,13 @@ angular.module('caseDetail', [])
             });
 
             $('.detail-description-five li').hammer().bind('tap',function(){
-                index.toggle_detail_wrapper.setIndex($(this).attr('data-index'));
-                togglePage.Page()
+                $(".detail-project-views").fadeOut("400");
+                var that = $(this);
+                setTimeout(function(){
+                    $(".detail-project-views").fadeIn("400");
+                    index.toggle_detail_wrapper.setIndex(that.attr('data-index'));
+                    togglePage.Page();
+                },400)
             });
 
         }

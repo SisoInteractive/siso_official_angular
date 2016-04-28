@@ -114,7 +114,6 @@ var index = {
                     }
                     this.index++;
                     this.active_Switch = false;
-                    console.log(this.index)
                 }
                 setTimeout(function(){
                     that.active_Switch = true;

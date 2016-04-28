@@ -141,6 +141,9 @@
   padding-bottom: 90px;
   z-index: 2;
 }
+.m-company-two-box h2 {
+  padding: 130px 130px 100px 130px;
+}
 .m-company-two-box ul {
   overflow: hidden;
   margin-left: -10px;
@@ -221,6 +224,9 @@
   .m-company-two-box ul li {
     width: 100%;
     padding-bottom: 40px;
+  }
+  .m-company-two-box h2 {
+    padding: 40px 30px 30px 30px;
   }
   .m-company .m-company-wrapper .mCSB_inside > .mCSB_container {
     margin-right: 10px;

@@ -17,9 +17,6 @@ angular.module('server',[])
 }])
 
 .controller('ServerController',['$scope','$http',function( $scope , $http){
-
-        var ServerCtrl = this;
-
         function init(){
             var news_body = $('.m-server');
             news_body.mCustomScrollbar({
@@ -30,11 +27,11 @@ angular.module('server',[])
                 contentTouchScroll:30
             });
 
-
             $('.m-server-nav').hammer().bind('tap',function(){
                 index.heardVideo.play();//导航视频播放
                 $('.header,.main-views').removeClass('active');
             });
         }
+
         init();
     }])
