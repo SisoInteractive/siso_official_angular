@@ -68,6 +68,7 @@ angular.module('mostRecent', [
 
             $('.m-mostRecent').addClass('active');
             $('.detail-bg').addClass('active');
+
         });
 
         function init(){
@@ -123,7 +124,7 @@ angular.module('mostRecent', [
                     $state.go('siso.careers');
                 },300);
 
-            })
+            });
 
         }
 

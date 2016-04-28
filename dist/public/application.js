@@ -29,7 +29,6 @@ angular.module('siso', [
                 abstract:true
             });
         $urlRouterProvider.otherwise('/home');
-
     }])
 
     .controller( 'MainController' , ['$scope', function($scope) {

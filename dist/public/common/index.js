@@ -115,9 +115,11 @@ var index = {
                     this.index++;
                     this.active_Switch = false;
                 }
+
                 setTimeout(function(){
                     that.active_Switch = true;
                 },1000);
+
             },
             up:function(){
                 var that = this;
@@ -136,9 +138,11 @@ var index = {
                     }
 
                 }
+
                 setTimeout(function(){
                     that.active_Switch = true;
                 },1000);
+
             },
             setIndex:function(activeIndex){
                 this.detail_wrapper = $('#detail-wrapper');

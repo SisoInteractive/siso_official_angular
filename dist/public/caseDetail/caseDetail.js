@@ -162,10 +162,9 @@ angular.module('caseDetail', [])
                     index.toggle_detail_wrapper.setIndex(1);
                 }
             };
+
             togglePage.Page = function(){
                 setTimeout(function(){
-
-                    console.log(index.toggle_detail_wrapper.index)
                     location.hash = "#/caseDetail?index="+ index.toggle_detail_wrapper.index +"";
                 },800)
             }
