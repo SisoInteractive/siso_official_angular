@@ -35,7 +35,7 @@ angular.module('home', [
                 function (res) {
                     var caseList = [];
                     var resultList = res.data.result;
-                    for (var i = 0; i < resultList.length; i++) {
+                    for ( var i = 0; i < resultList.length; i++ ) {
                         if (resultList[i].pushHome == true) {
                             caseList.push(resultList[i]);
                         } else {
@@ -56,14 +56,14 @@ angular.module('home', [
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
                 //
-
                 init();
             });
 
-            HomeCtrl.formatBody = function (body) {
+            HomeCtrl.formatBody = function ( body ) {
                 return '<p>' + body.split('\n').join('</p><p>') + '</p>';
             };
         });
+
         function init(){
             index.initNumber++;
             console.log('进入 main1!' + index.initNumber );
@@ -81,26 +81,28 @@ angular.module('home', [
             $('.frame-bg').parallax({});
 
             //fullPage.js
-            if(typeof $.fn.fullpage.destroy === 'undefined'){
-                console.log(typeof $.fn.fullpage.destroy)
+            if ( typeof $.fn.fullpage.destroy === 'undefined' ) {
                 $('#fullpage').fullpage({
                     continuousVertical: true,
                     easing: 'easeInOutCubic',
                     //This callback is fired once the user leaves a section
-                    onLeave: function(index, nextIndex, direction){
+                    onLeave: function( index, nextIndex, direction ) {
                         dataList(nextIndex);
+
                         var nextItem = HomeCtrl.caseList[nextIndex-1];
                         title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
                         more_span.css({'background':'#' + nextItem.homeBtnColor});
                     }
                 });
-            }else{
+            } else {
                 $.fn.fullpage.destroy("all");
+
                 $('#fullpage').fullpage({
                     easing: 'easeInOutCubic',
                     //This callback is fired once the user leaves a section
                     onLeave: function(index, nextIndex, direction){
                         dataList(nextIndex);
+
                         var nextItem = HomeCtrl.caseList[nextIndex-1];
                         title_bg.css({'background': '#' + nextItem.homeBlockColor, 'opacity':'0.95'});
                         more_span.css({'background':'#' + nextItem.homeBtnColor});
@@ -111,32 +113,38 @@ angular.module('home', [
             function dataList(caseList){
                 if(caseList){
                     var dataIndex = caseList - 1;
+
                     $( '.m-article-title' ).find( '.item-go' ).attr('data-index',HomeCtrl.caseList[dataIndex].order);
+
                     $( '.m-article-title' ).find( '.item-bd' ).html( HomeCtrl.caseList[dataIndex].title );
+
                     $( '.m-article-title' ).find( '.item-ft' ).html( HomeCtrl.formatBody(HomeCtrl.caseList[dataIndex].body) );
                 }
 
             }
 
             //click moveSectionUp-btn
-            $('#moveSectionUp-btn').hammer().bind("tap",function(){
+            $('#moveSectionUp-btn').hammer().bind( "tap", function() {
                 $('#fullpage').fullpage.moveSectionUp();
             });
 
             //click moveSectionDown-btn
-            $('#moveSectionDown-btn').hammer().bind("tap",function(){
+            $('#moveSectionDown-btn').hammer().bind( "tap", function() {
                 $('#fullpage').fullpage.moveSectionDown();
             });
 
-            $('.container-list-btn').hammer().bind('tap',function(){
+            $('.container-list-btn').hammer().bind( 'tap', function() {
                 index.heardVideo.play();//导航视频播放
+
                 $('.header,.main-views').removeClass('active');
             });
 
             // TODO
-            $('.item-go').hammer().bind("tap",function(){
+            $('.item-go').hammer().bind( "tap", function() {
                 $('.detail-project-views').addClass('active');
+
                 $('.detail-bg').addClass('active');
+
                 var dataIndex = $(this).attr('data-index');
                 setTimeout(function(){
                     $state.go('siso.caseDetail', {index:dataIndex});

@@ -12,72 +12,76 @@ var index = {
     operate_dom:function(){
         index.window_width = $(window).width();  //get window width
         index.window_height = $(window).height(); //get window height
+
         // click toggle-btn
         index.header = $('.header');
+
         //toggle
         function addActive( route , locationHash ){
-            if( locationHash.indexOf( route ) < 0 ) {
+            if ( locationHash.indexOf( route ) < 0 ) {
                 $('.loading-bod').addClass('active');
                 setTimeout(function(){
                     $('.main-views,.header').addClass('active');
                     $('.loading-bod').removeClass('active');
                 },800);
-            }else{
+            } else {
                 $('.main-views,.header').addClass('active');
             }
+
             index.heardVideo.pause();//关闭导航视频播放
         }
 
-        $('.toggle-home').hammer().bind('tap',function(){
+        $('.toggle-home').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'home'
             addActive( route , locationHash )
         });
 
-        $('.toggle-company').hammer().bind('tap',function() {
+        $('.toggle-company').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'company';
             addActive( route , locationHash );
         });
 
-        $('.toggle-mostRecent').hammer().bind('tap',function() {
+        $('.toggle-mostRecent').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'mostRecent';
             addActive( route , locationHash );
         });
 
-        $('.toggle-news').hammer().bind('tap',function() {
+        $('.toggle-news').hammer().bind( 'tap',function() {
             var locationHash = location.hash;
             var route = 'news';
             addActive( route , locationHash );
         });
 
-        $('.toggle-careers').hammer().bind('tap',function() {
+        $('.toggle-careers').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'careers';
             addActive( route , locationHash );
         });
 
-        $('.toggle-about').hammer().bind('tap',function() {
+        $('.toggle-about').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'about';
             addActive( route , locationHash );
         });
 
-        $('.toggle-services').hammer().bind('tap',function() {
+        $('.toggle-services').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
             var route = 'server';
             addActive( route , locationHash );
         });
 
-        $('.toggle-btn').hammer().bind('tap',function() {
+        $('.toggle-btn').hammer().bind( 'tap', function() {
             var locationHash = location.hash;
-            if( locationHash.indexOf('caseDetail') < 0 ){
+            if ( locationHash.indexOf('caseDetail') < 0 ){
                 $('.main-views,.header').addClass('active');
                 $('.loading-bod').removeClass('active');
-            }else{
+            } else {
                 $('.detail-project-views').addClass('active')
             }
+
             index.heardVideo.pause();
         });
 
@@ -97,42 +101,45 @@ var index = {
          */
 
         index.toggle_detail_wrapper = {
-            detail_wrapper:'',
-            index:1,
-            active_Switch:true,
-            next:function(){
+            detail_wrapper: '',
+            index: 1,
+            active_Switch: true,
+            next: function() {
                 this.detail_wrapper = $('#detail-wrapper');
                 var that = this;
-                if(this.active_Switch){
+                if ( this.active_Switch ) {
                     var transformXVal = index.getTransForm(".detail-wrapper");
                     var transformXVal_Next = - ( this.index * 100 );
-                    if(  transformXVal == 0 ){
+                    if (  transformXVal == 0 ) {
                         transformXVal_Next = -100;
+
                         this.detail_wrapper.css("webkitTransform","translate3d("+ transformXVal_Next +"%,0,0)");
-                    }else{
+                    } else {
                         this.detail_wrapper.css("webkitTransform","translate3d("+ transformXVal_Next + "%,0,0)");
                     }
+
                     this.index++;
+
                     this.active_Switch = false;
                 }
 
-                setTimeout(function(){
+                setTimeout(function() {
                     that.active_Switch = true;
                 },1000);
 
             },
-            up:function(){
+            up: function() {
                 var that = this;
                 this.detail_wrapper = $('#detail-wrapper');
-                if(this.active_Switch){
+                if ( this.active_Switch ) {
                     var transformXVal = ( this.index * 100 );
                     if(  transformXVal != 0 ){
                         var transformXVal_up =  (this.index - 2) * -100;
                         this.detail_wrapper.css("webkitTransform","translate3d("+ transformXVal_up + "%,0,0)");
                     }
-                    if(this.index == 1){
+                    if ( this.index == 1 ){
                         this.index ==1
-                    }else{
+                    } else {
                         this.index--;
                         this.active_Switch = false;
                     }
@@ -144,9 +151,10 @@ var index = {
                 },1000);
 
             },
-            setIndex:function(activeIndex){
+            setIndex: function( activeIndex ) {
                 this.detail_wrapper = $('#detail-wrapper');
-                if(activeIndex){
+
+                if ( activeIndex ) {
                     this.index = activeIndex;
                     var transformXVal = -( (this.index - 1) * 100 );
                     this.detail_wrapper.css("webkitTransform","translate3d("+ transformXVal + "%,0,0)");
@@ -158,7 +166,7 @@ var index = {
         /*
          *   get Transform css value
          */
-        function getTransform(Class){
+        function getTransform( Class ) {
                 var wrapper = $(Class);
                 if(wrapper) {
                     var transformVal = wrapper.css('-webkit-transform');
@@ -168,6 +176,7 @@ var index = {
                     return transformXVal;
                 }
         }
+
         index.getTransForm = getTransform;
 
 
