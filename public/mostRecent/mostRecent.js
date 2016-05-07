@@ -31,7 +31,7 @@ angular.module('mostRecent', [
                     var dataOdd = [];
                     var dataEven= [];
 
-                    for( var i = 0; i<data.length; i++ ){
+                    for( var i = 0; i<data.length; i++ ) {
                         if( i%2 == 0 ){
                             dataOdd.push(data[i]);
                         }else{
@@ -49,7 +49,7 @@ angular.module('mostRecent', [
             $scope.$on('onRepeatLast', function(scope, element, attrs){
                 /* caseRList data processing */
                 initNub++
-                if(initNub==1){
+                if ( initNub==1 ) {
                     var mostRecentLi = $('.mostRecent-body .left .item:eq(0)');
                     var mostRecentTmpl = $("<li class='item half show' id='RecruitmentBox'>"
                                         +"<div class='item-img'><img  width='100%'></div>"
@@ -63,6 +63,7 @@ angular.module('mostRecent', [
                                         +"</li>")
                     mostRecentTmpl.insertAfter(mostRecentLi);
                 }
+
                 init();
             });
 
@@ -74,10 +75,10 @@ angular.module('mostRecent', [
         function init(){
             /* jquery scroll for mostRecent */
             $("#mostRecent-wrapper").mCustomScrollbar({
-                autoHideScrollbar:false,
-                theme:"inset",
-                scrollEasing:"easeOut",
-                scrollInertia:800,
+                autoHideScrollbar: false,
+                theme: "inset",
+                scrollEasing: "easeOut",
+                scrollInertia: 800,
                 callbacks:{
                     whileScrolling:function(){
                         //console.log(this.mcs.topPct);
@@ -88,28 +89,31 @@ angular.module('mostRecent', [
             /*Control mostRecent-body --> li height*/
             function mostRecent_item(){
                 var mostRecent_li = $(".item-box .item");
-                mostRecent_li.each(function(item,self){
+                mostRecent_li.each(function( item, self ) {
                     var mostRecent_li_width_value = $(self).width();
                     $(self).css('height',mostRecent_li_width_value+"px");
                 });
             }
             mostRecent_item();
 
-            $(window).resize(function(){
+            $(window).resize(function () {
                 index.window_width = $(window).width();
                 index.window_height = $(window).height();
                 mostRecent_item();
             });
 
-            $('.mostRecent-nav').hammer().bind('tap',function(){
+            $('.mostRecent-nav').hammer().bind( 'tap', function() {
                 index.heardVideo.play();//导航视频播放
+
                 $('.header,.main-views').removeClass('active');
             });
 
             // component toggle
-            $('.item-go').hammer().bind("tap",function(){
+            $('.item-go').hammer().bind( "tap", function() {
                 $('.detail-project-views').addClass('active');
+
                 $('.detail-bg').addClass('active');
+
                 var dataIndex = $(this).attr('data-index');
                 setTimeout(function(){
                     $state.go('siso.caseDetail', {index:dataIndex});
@@ -117,7 +121,7 @@ angular.module('mostRecent', [
             });
 
             //招聘module toggle
-            $("#RecruitmentBox").hammer().bind("tap",function(){
+            $("#RecruitmentBox").hammer().bind( "tap", function() {
                 $(".main-views").fadeOut("300");
                 setTimeout(function(){
                     $(".main-views").fadeIn();

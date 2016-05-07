@@ -27,7 +27,7 @@ angular.module('server',[])
                 contentTouchScroll:30
             });
 
-            $('.m-server-nav').hammer().bind('tap',function(){
+            $('.m-server-nav').hammer().bind( 'tap', function() {
                 index.heardVideo.play();//导航视频播放
                 $('.header,.main-views').removeClass('active');
             });
